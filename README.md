@@ -24,7 +24,6 @@ Imagine a day where every task is effortless. With our virtual assistance team, 
   - [Who Are We? 🌟](#who-are-we-)
   - [Table of Contents 📑](#table-of-contents-)
   - [Technical Overview 🛠️](#technical-overview-️)
-
   - [Installation :cd:](#installation-cd)
     - [Install with Bash Script](#install-with-bash-script)
   - [Manual Installation](#manual-installation)
@@ -58,7 +57,7 @@ You can either use the provided Bash script or manually install the application 
 ```bash
 chmod u+x simplify.sh
 ./simplify.sh <your-generated-pat>
-cd Simplify
+cd Simplify-Frontend
 ```
 
 ## Manual Installation
@@ -74,8 +73,8 @@ cd Simplify
 2. Clone the repository using your generated PAT:
 
 ```bash
-git clone https://<your-generated-pat>@github.com/Lassist-DZ/Simplify.git
-cd Simplify
+git clone https://<your-generated-pat>@github.com/Lassist-DZ/Simplify-Frontend.git
+cd Simplify-Frontend
 ```
 
 ### Install dependencies:

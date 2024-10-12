@@ -25,10 +25,10 @@ echo "Installing Nginx..."
 apt-get install -y nginx
 
 # Clone Repository
-REPO_DIR="./Simplify"
+REPO_DIR="./Simplify-Frontend"
 echo "Cloning repository..."
 if [ ! -d "$REPO_DIR" ]; then
-  git clone https://$1@github.com/Lassist-DZ/Simplify.git "$REPO_DIR"
+  git clone https://$1@github.com/Lassist-DZ/Simplify-Frontend.git "$REPO_DIR"
 else
   echo "Repository already exists. Pulling latest changes..."
   cd "$REPO_DIR" || exit
