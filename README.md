@@ -1,4 +1,4 @@
-<h1> Simplify</h1>
+### Simplify
 <img src="./simplify_logo.svg" alt="simplify logo" width="48"/>
 
 
@@ -21,7 +21,7 @@ Imagine a day where every task is effortless. With our virtual assistance team, 
 ## Table of Contents 📑
 
 - [Simplify](#simplify-)
-  - [Introduction 🌟](#introduction-)
+  - [Who Are We? 🌟](#who-are-we-)
   - [Table of Contents 📑](#table-of-contents-)
   - [Technical Overview 🛠️](#technical-overview-️)
     - [Frontend](#frontend)
