@@ -1,4 +1,4 @@
-### Simplify
+# Simplify
 <img src="./simplify_logo.svg" alt="simplify logo" width="48"/>
 
 
