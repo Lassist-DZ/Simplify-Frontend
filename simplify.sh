@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Check for GitHub token argument
+if [ -z "$1" ]; then
+  echo "Error: No Personal Access Token (PAT) provided."
+  echo "Usage: $0 <your-generated-pat>"
+  exit 1
+fi
+
 # Update package list
 echo "Updating package list..."
 apt-get update
@@ -18,10 +25,10 @@ echo "Installing Nginx..."
 apt-get install -y nginx
 
 # Clone Repository
-REPO_DIR="/var/Simplify"
+REPO_DIR="./Simplify"
+echo "Cloning repository..."
 if [ ! -d "$REPO_DIR" ]; then
-  echo "Cloning repository..."
-  git clone https://github.com/Lassist-DZ/Simplify.git "$REPO_DIR"
+  git clone https://$1@github.com/Lassist-DZ/Simplify.git "$REPO_DIR"
 else
   echo "Repository already exists. Pulling latest changes..."
   cd "$REPO_DIR" || exit
@@ -76,5 +83,4 @@ systemctl enable nginx
 echo "Restarting Nginx..."
 systemctl restart nginx
 
-# backend configuration to be added later
-
+# Backend configuration to be added later

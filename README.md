@@ -58,12 +58,15 @@ You can either use the provided Bash script or manually install the application 
 
 ### Install with Bash Script
 
-Run the automated installation with the following commands:
+1. Download the simplify.sh script from the root of the repository.
 
+2. Generate a Personal Access Token (PAT) by following the instructions [Here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+
+3. Make the script executable and run the installation with the generated PAT by using the following commands:
 ```bash
-cd /var
 chmod u+x simplify.sh
-./simplify.sh
+./simplify.sh <your-generated-pat>
+cd Simplify
 ```
 
 ## Manual Installation
@@ -75,9 +78,11 @@ chmod u+x simplify.sh
 - npm
 
 ### Clone the Repository
+1. Generate a Personal Access Token (PAT) by following the instructions [Here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+2. Clone the repository using your generated PAT:
 
 ```bash
-git clone https://github.com/Lassist-DZ/Simplify.git
+git clone https://<your-generated-pat>@github.com/Lassist-DZ/Simplify.git
 cd Simplify
 ```
 
@@ -109,5 +114,5 @@ npm run dev
 Once the application is running, access it via your browser:
 
 - Backend:  to be added later
-- Frontend: <http://localhost:3000>
+- Frontend: <http://localhost:5173>
 
