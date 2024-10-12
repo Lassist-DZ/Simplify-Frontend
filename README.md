@@ -1,4 +1,5 @@
-<h1> Simplify <img src="./simplify_logo.svg" alt="simplify logo" width="48"/></h1>
+<h1> Simplify</h1>
+<img src="./simplify_logo.svg" alt="simplify logo" width="48"/>
 
 
 
