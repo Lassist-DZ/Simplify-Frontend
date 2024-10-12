@@ -24,8 +24,6 @@ Imagine a day where every task is effortless. With our virtual assistance team, 
   - [Who Are We? 🌟](#who-are-we-)
   - [Table of Contents 📑](#table-of-contents-)
   - [Technical Overview 🛠️](#technical-overview-️)
-    - [Frontend](#frontend)
-    - [Backend](#backend)
 
   - [Installation :cd:](#installation-cd)
     - [Install with Bash Script](#install-with-bash-script)
@@ -33,9 +31,7 @@ Imagine a day where every task is effortless. With our virtual assistance team, 
     - [Prerequisites](#prerequisites)
     - [Clone the Repository](#clone-the-repository)
     - [Install Dependencies](#install-dependencies)
-    - [Install frontend dependencies:](#install-frontend-dependencies)
     - [Set Up Nginx](#set-up-nginx)
-    - [Install backend dependencies:](#install-backend-dependencies)
     - [Run the Application](#run-the-application)
   - [Usage 📖](#usage-)
 
@@ -45,12 +41,8 @@ Imagine a day where every task is effortless. With our virtual assistance team, 
 Here’s a breakdown of the technology stack and architectural decisions:
 
 ### Frontend
-
 - To be filled later
 
-### Backend
-
-- To be filled later
 
 ## Installation :cd:
 
@@ -86,15 +78,11 @@ git clone https://<your-generated-pat>@github.com/Lassist-DZ/Simplify.git
 cd Simplify
 ```
 
-### Install frontend dependencies:
+### Install dependencies:
 
 ```bash
-cd frontend
 npm install
 ```
-
-### Install backend dependencies
-- to be added later
 
 ### Set Up Nginx
 
@@ -102,10 +90,7 @@ Update Nginx configuration with the appropriate settings
 
 ### Run the Application
 
-- backend running commands to be added later
-
 ```bash
-cd frontend
 npm run dev
 ```
 
@@ -113,6 +98,5 @@ npm run dev
 
 Once the application is running, access it via your browser:
 
-- Backend:  to be added later
 - Frontend: <http://localhost:5173>
 

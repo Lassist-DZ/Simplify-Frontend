@@ -37,7 +37,7 @@ fi
 
 # Install npm Dependencies
 echo "Installing npm dependencies..."
-cd "$REPO_DIR/frontend" || exit
+cd "$REPO_DIR" || exit
 npm install
 
 # Build the application 
