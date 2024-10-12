@@ -1,4 +1,4 @@
-<h1> Simplify <img src="./simplify_logo.png" alt="simplify logo" width="24"/></h1>
+<h1> Simplify <img src="./simplify_logo.png" alt="simplify logo" width="48"/></h1>
 
 
 
