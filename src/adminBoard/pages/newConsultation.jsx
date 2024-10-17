@@ -10,38 +10,36 @@ import {
   BreadcrumbSeparator,
 } from "../../shadcn/ui/breadcrumb";
 import FormControl from "../components/FormControl";
+import createConsultation from "../../functions/createConsultation";
 import { Button } from "../../shadcn/ui/button";
-import createNewModel from "../../functions/createPricingModel";
 
-export default function NewPricing() {
-  const [newPricingModel, setNewPricingModel] = useState({
-    category: "",
-    assistants_count: "",
-    users_count: "",
-    price_per_hour: "",
-    services: "",
+export default function NewConsultation() {
+  const [newConsultation, setNewConsultation] = useState({
+    full_name: "",
+    email: "",
+    phone_number: "",
+    why_interested: "",
   });
 
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const handleInputChange = (field, value) => {
-    setNewPricingModel((prevModel) => ({
+    setNewConsultation((prevModel) => ({
       ...prevModel,
       [field]: value,
     }));
   };
 
-  const pricingFields = [
-    { type: "text", attribute: "category", placeholder: "Enter plan category" },
-    { type: "text", attribute: "assistants_count", placeholder: "How many assistants are provided for this plan?" },
-    { type: "text", attribute: "users_count", placeholder: "How many users are allowed in this plan?" },
-    { type: "number", attribute: "price_per_hour", placeholder: "Enter price per hour" },
-    { type: "textarea", attribute: "services", placeholder: "Enter services included (comma-separated)" }
+  const consultationFields = [
+    { type: "text", attribute: "full_name", placeholder: "Enter full name" },
+    { type: "email", attribute: "email", placeholder: "Enter email" },
+    { type: "number", attribute: "phone_number", placeholder: "Enter phone number" },
+    { type: "textarea", attribute: "why_interested", placeholder: "Why are you interested in consultation?" }
   ];
 
   return (
-    <ContentLayout title="New Pricing Model">
+    <ContentLayout title="New Consultation">
       <Breadcrumb className="text-white fixed">
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -52,7 +50,7 @@ export default function NewPricing() {
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link to="/admin/pricings">Pricing Models</Link>
+              <Link to="/admin/consultations">Consultations</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
@@ -64,14 +62,14 @@ export default function NewPricing() {
 
       <div className="mt-16">
         <FormControl
-          formData={newPricingModel}
+          formData={newConsultation}
           onInputChange={handleInputChange}
-          fields={pricingFields}
-          title="Pricing Model Details"
+          fields={consultationFields}
+          title="Consultation Details"
         />
         <div className="mt-6 flex justify-center">
-          <Button onClick={() => createNewModel(setLoading, newPricingModel, setError)} className="bg-blue-700 rounded text-white" isLoading={loading}>
-            {loading ? "Creating..." : "Create Pricing Model"}
+          <Button onClick={() => createConsultation(setLoading,newConsultation, setError)} className="bg-blue-700 rounded text-white" isLoading={loading}>
+            {loading ? "Creating..." : "Create Consultation"}
           </Button>
         </div>
       </div>

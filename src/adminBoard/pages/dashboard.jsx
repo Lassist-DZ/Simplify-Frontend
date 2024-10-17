@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from '../../shadcn/ui/card'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { ContentLayout } from "../content-layout";
 import {
   Breadcrumb,
@@ -12,8 +12,12 @@ import {
 } from "../../shadcn/ui/breadcrumb";
 
 const Dashboard = () => {
- 
-
+  const navigate = useNavigate()
+ const token = localStorage.getItem("token")
+ if (!token) {
+  localStorage.removeItem("token")
+  navigate("/login")
+ }
   // const progressGroupExample1 = [
   //   { title: 'Monday', value1: 34, value2: 78 },
   //   { title: 'Tuesday', value1: 56, value2: 94 },
