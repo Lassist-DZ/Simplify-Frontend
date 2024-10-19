@@ -1,10 +1,10 @@
 import axios from "axios";
 import loggout from "./loggout";
-const fetchConsultations = async (setLoading, token, setConsultations, navigate, setError) => {
+const fetchNewsletterSubs = async (setLoading, token, setConsultations, navigate, setError) => {
     try {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:5000/api/consultations/get_consultations_all",
+        "http://localhost:5000/api/newsletter_subs/get_newsletter_subs_all",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -24,4 +24,4 @@ const fetchConsultations = async (setLoading, token, setConsultations, navigate,
       setLoading(false);
     }
   };
-export default fetchConsultations
+export default fetchNewsletterSubs

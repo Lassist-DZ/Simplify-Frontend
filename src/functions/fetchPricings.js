@@ -3,7 +3,7 @@ const fetchPricingModels = async (setLoading, setPricingModels, setError) => {
     try {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:5001/api/pricing/get_pricing_all"
+        "http://localhost:5000/api/pricing/get_pricing_all"
       );
 
       if (response.statusText === "OK") {

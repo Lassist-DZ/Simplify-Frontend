@@ -1,6 +1,5 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { LogOut } from "lucide-react";
-import { PanelsTopLeft } from "lucide-react";
 import { cn } from "../../shadcn/lib/utils";
 import { getMenuList } from "../../shadcn/lib/menu-list";
 import { Button } from "../../shadcn/ui/button";
@@ -10,11 +9,11 @@ import {
   TooltipTrigger,
   TooltipProvider,
 } from "../../shadcn/ui/tooltip";
+import loggout from "../../functions/loggout";
 
 const Menu = () => {
   const pathname = useLocation().pathname;
   const menuList = getMenuList(pathname);
-
   return (
     <aside className="fixed top-0 left-0 z-20 h-screen w-[20vw] overflow-hidden">
 <div className="relative h-full flex flex-col px-3 py-4 overflow-y-auto shadow-md dark:shadow-zinc-800">
@@ -72,7 +71,7 @@ const Menu = () => {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button
-                    onClick={() => {}}
+                    onClick={()=> {}}
                     variant="outline"
                     className="w-full justify-center h-10 mt-5 bg-transparent text-white flex"
                   >

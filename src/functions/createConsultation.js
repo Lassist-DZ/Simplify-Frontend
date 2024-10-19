@@ -5,7 +5,7 @@ const createConsultation = async (setLoading, newPricingModel, setError) => {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5001/api/consultations/create_consultation",
+        "http://localhost:5000/api/consultations/create_consultation",
         newPricingModel
       );
       toast.success(response.data.message, {

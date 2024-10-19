@@ -11,6 +11,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import NewConsultation from './adminBoard/pages/newConsultation';
+import NewsletterSubs from './adminBoard/pages/newsletter_subs';
+import NewSubscriber from './adminBoard/pages/newSubscriber';
 
 const isLoggedIn = () => {
   return !!localStorage.getItem('token'); // Check for token in localStorage
@@ -41,6 +43,8 @@ function App() {
                     <Route path="/pricings" element={<PricingModel />} />
                     <Route path="/pricings/new" element={<NewPricing />} />
                     <Route path="/consultations/new" element={<NewConsultation />} />
+                    <Route path="/newsletter_subs" element={<NewsletterSubs />} />
+                    <Route path="/newsletter_subs/new" element={<NewSubscriber />} />
                   </Routes>
                 </div>
               </AdminRoute>

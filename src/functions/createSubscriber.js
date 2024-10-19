@@ -1,11 +1,11 @@
 import axios from "axios"
 import { toast, Bounce } from "react-toastify";
-const createNewModel = async (setLoading, newPricingModel, setError) => {
+const createSubscriber = async (setLoading, newPricingModel, setError) => {
     try {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/api/pricing/create_pricing",
+        "http://localhost:5000/api/newsletter_subs/create_subscriber",
         newPricingModel
       );
       toast.success(response.data.message, {
@@ -20,7 +20,7 @@ const createNewModel = async (setLoading, newPricingModel, setError) => {
         transition: Bounce,
         });
       setLoading(false);
-      window.location.href = '/admin/pricings'; 
+      window.location.href = '/admin/newsletter_subs'; 
     } catch (err) {
       console.log(err);
       toast.error(err.response.data.message, {
@@ -39,4 +39,4 @@ const createNewModel = async (setLoading, newPricingModel, setError) => {
     }
   };
 
-export default createNewModel
+export default createSubscriber

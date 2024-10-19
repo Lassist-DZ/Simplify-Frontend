@@ -3,7 +3,8 @@ import {
   Bookmark,
   Calendar1,
   LayoutGrid,
-  LucideIcon
+  LucideIcon,
+  MailQuestionIcon
 } from "lucide-react";
 
 type Submenu = {
@@ -51,6 +52,11 @@ export function getMenuList(pathname: string): Group[] {
           href: "/admin/pricings",
           label: "Pricing Models",
           icon: BadgeDollarSign
+        },
+        {
+          href: "/admin/newsletter_subs",
+          label: "Newsletter Subscribers",
+          icon: MailQuestionIcon
         },
 
       ]

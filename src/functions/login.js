@@ -33,7 +33,8 @@ const handleLogin = async (e, setLoading, setError, email, password, navigate) =
     setError(null);
 
     try {
-      const response = await axios.post("http://localhost:5001/api/auth/login", {
+      const response = await axios.post(
+        "http://localhost:5000/api/auth/login", {
         email,
         password,
       });
