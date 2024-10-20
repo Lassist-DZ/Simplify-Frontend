@@ -2,43 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Poppins';
+  src: url("./assets/fonts/Poppins.ttf") format('truetype');
+}
+
 :root{
+  --primary-100: #EBF1F9;
+  --primary-200: #B0CBEA;
+  --primary-300: #6FA6D9;
+  --primary-400: #5580A8;
+  --primary-500: #3C5C79;
+  --primary-base-600: #243A4E;
+  --primary-700: #0F1B26;
+
+  --secondary-100: #FCEAE6;
+  --secondary-200: #F7B6A3;
+  --secondary-base-300: #F47E42;
+  --secondary-400: #BD602F;
+  --secondary-500: #89431F;
+  --secondary-600: #582910;
+  --secondary-700: #2B1104;
+
+  --tertiary-base-100: #FEDA79;
+  --tertiary-200: #D9B220;
+  --tertiary-300: #AC8D17;
+  --tertiary-400: #81690F;
+  --tertiary-500: #594807;
+  --tertiary-600: #332802;
+  --tertiary-700: #161001;
+
+  --tertiary2-100: #E6F2FD;
+  --tertiary2-200: #B1DAFA;
+  --tertiary2-base-300: #42B8F4;
+  --tertiary2-400: #3290C0;
+  --tertiary2-500: #236A8F;
+  --tertiary2-600: #144760;
+  --tertiary2-700: #072635;
+
+  --neutral-white: #FFFFFF;
+  --neutral-100: #DFDDD9;
+  --neutral-200: #B7B5B1;
+  --neutral-300: #918F8C;
+  --neutral-400: #6C6B69;
+  --neutral-500: #4A4947;
+  --neutral-600: #2A2928;
+  --neutral-700: #111110;
+  --neutral-black: #000000;
+
+  --font-size-display: 3.5625rem;
+  --font-size-hyperlink: 1rem;
   
+  --font-size-paragraph3: 1.75rem;
+  --font-weight-500: 500;
+  --font-weight-400:400;
+  
+  --font-style-normal: normal;
 }
 
-@layer base {
-  :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-  }
-
- 
+body {
+  font-family: "Poppins", sans-serif;
 }
+
 .admin-background{
   background-color: grey;
 }
