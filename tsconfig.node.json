@@ -1,13 +1,12 @@
 {
-    "compilerOptions": {
-      "jsx": "react",
-      "module": "commonjs",
-      "target": "ESNext",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
-    },
-    "include": ["./"]
-  }
-  
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "commonjs",
+    "target": "ESNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["./"]
+}
