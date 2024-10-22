@@ -13,6 +13,7 @@ import './App.css';
 import NewConsultation from './adminBoard/pages/newConsultation';
 import NewsletterSubs from './adminBoard/pages/newsletter_subs';
 import NewSubscriber from './adminBoard/pages/newSubscriber';
+import Home from './pages/home';
 
 const isLoggedIn = () => {
   return !!localStorage.getItem('token'); // Check for token in localStorage
@@ -26,10 +27,10 @@ function App() {
   return (
     <div>
       <Router>
-        <Routes>
-          
+        <Routes>  
           <Route path="/login" element={<Login />} />
-
+          <Route path='/' element={<Home/>}/>
+          <Route path='/home' element={<Home/>}/>
           <Route
             path="/admin/*"
             element={

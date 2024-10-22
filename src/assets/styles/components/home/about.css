@@ -1,0 +1,41 @@
+.about {
+    background: url("../../../icons/background.svg");
+    width: 100%;
+    background-size: cover;
+    background-position: center; 
+}
+.about_header{
+    position: relative;
+    width: fit-content;
+}
+.about_header img {
+    width: 655px;
+    height: auto;
+}
+.about_header_title{
+    color: var(--primary-base-600);
+}
+
+.about_description_content h1{
+    
+    color: var(--tertiary2-500);
+}
+.about_description_content span{
+    
+    position: relative;
+    color: var(--primary-700);
+    z-index: 1;
+    
+}
+
+.about_description_content span svg{
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    z-index: -1;
+    width: 95%;
+   
+}
+.about_description_content p{
+    color: var(--neutral-black);
+}
