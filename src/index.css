@@ -2,47 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-100: #ebf1f9;
+  --primary-200: #b0cbea;
+  --primary-300: #6fa6d9;
+  --primary-400: #5580a8;
+  --primary-500: #3c5c79;
+  --primary-base-600: #243a4e;
+  --primary-700: #0f1b26;
 
-:root{
-  --primary-100: #EBF1F9;
-  --primary-200: #B0CBEA;
-  --primary-300: #6FA6D9;
-  --primary-400: #5580A8;
-  --primary-500: #3C5C79;
-  --primary-base-600: #243A4E;
-  --primary-700: #0F1B26;
-
-  --secondary-100: #FCEAE6;
-  --secondary-200: #F7B6A3;
-  --secondary-base-300: #F47E42;
-  --secondary-400: #BD602F;
-  --secondary-500: #89431F;
+  --secondary-100: #fceae6;
+  --secondary-200: #f7b6a3;
+  --secondary-base-300: #f47e42;
+  --secondary-400: #bd602f;
+  --secondary-500: #89431f;
   --secondary-600: #582910;
-  --secondary-700: #2B1104;
+  --secondary-700: #2b1104;
 
-  --tertiary-base-100: #FEDA79;
-  --tertiary-200: #D9B220;
-  --tertiary-300: #AC8D17;
-  --tertiary-400: #81690F;
+  --tertiary-base-100: #feda79;
+  --tertiary-200: #d9b220;
+  --tertiary-300: #ac8d17;
+  --tertiary-400: #81690f;
   --tertiary-500: #594807;
   --tertiary-600: #332802;
   --tertiary-700: #161001;
 
-  --tertiary2-100: #E6F2FD;
-  --tertiary2-200: #B1DAFA;
-  --tertiary2-base-300: #42B8F4;
-  --tertiary2-400: #3290C0;
-  --tertiary2-500: #236A8F;
+  --tertiary2-100: #e6f2fd;
+  --tertiary2-200: #b1dafa;
+  --tertiary2-base-300: #42b8f4;
+  --tertiary2-400: #3290c0;
+  --tertiary2-500: #236a8f;
   --tertiary2-600: #144760;
   --tertiary2-700: #072635;
 
-  --neutral-white: #FFFFFF;
-  --neutral-100: #DFDDD9;
-  --neutral-200: #B7B5B1;
-  --neutral-300: #918F8C;
-  --neutral-400: #6C6B69;
-  --neutral-500: #4A4947;
-  --neutral-600: #2A2928;
+  --neutral-white: #ffffff;
+  --neutral-100: #dfddd9;
+  --neutral-200: #b7b5b1;
+  --neutral-300: #918f8c;
+  --neutral-400: #6c6b69;
+  --neutral-500: #4a4947;
+  --neutral-600: #2a2928;
   --neutral-700: #111110;
   --neutral-black: #000000;
 
@@ -55,7 +54,6 @@
   --font-size-paragraph2: 1.5rem;
   --button: 1.25rem;
   --font-size-hyperlink: 1rem;
-
   --font-weight-500: 500;
   --font-weight-400:400;
   --font-style-normal: normal;
@@ -67,14 +65,14 @@
   padding: 0;
 }
 
+
 body {
   font-family: "Poppins", sans-serif;
 }
 
-.admin-background{
+.admin-background {
   background-color: grey;
 }
-
 
 
 h2{
@@ -125,17 +123,3 @@ h1{
   --font-size-h4: 1rem;
   }
 }
-/* @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
- 
-
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
-  } */

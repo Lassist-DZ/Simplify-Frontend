@@ -14,9 +14,8 @@ import NewConsultation from './adminBoard/pages/newConsultation';
 import NewsletterSubs from './adminBoard/pages/newsletter_subs';
 import NewSubscriber from './adminBoard/pages/newSubscriber';
 import Home from './pages/home';
-
 const isLoggedIn = () => {
-  return !!localStorage.getItem('token'); // Check for token in localStorage
+  return !!localStorage.getItem("token"); 
 };
 
 const AdminRoute = ({ children }) => {
@@ -43,9 +42,18 @@ function App() {
                     <Route path="/consultations" element={<Consultaitons />} />
                     <Route path="/pricings" element={<PricingModel />} />
                     <Route path="/pricings/new" element={<NewPricing />} />
-                    <Route path="/consultations/new" element={<NewConsultation />} />
-                    <Route path="/newsletter_subs" element={<NewsletterSubs />} />
-                    <Route path="/newsletter_subs/new" element={<NewSubscriber />} />
+                    <Route
+                      path="/consultations/new"
+                      element={<NewConsultation />}
+                    />
+                    <Route
+                      path="/newsletter_subs"
+                      element={<NewsletterSubs />}
+                    />
+                    <Route
+                      path="/newsletter_subs/new"
+                      element={<NewSubscriber />}
+                    />
                   </Routes>
                 </div>
               </AdminRoute>

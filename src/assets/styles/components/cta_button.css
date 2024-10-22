@@ -4,6 +4,7 @@
     border-radius: 100px;
     color: var(--neutral-white);
     position: relative;
+    z-index: 1;
 }
 .cta_hero::before{
     position: absolute;
