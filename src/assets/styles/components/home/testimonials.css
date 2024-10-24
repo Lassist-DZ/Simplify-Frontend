@@ -1,0 +1,44 @@
+.testimonials {
+    background: url("../../../icons/testimonials-background.svg") 108px 144px / 85.833% 95.725% no-repeat, #FFF;
+}
+.testimonials_header h1{
+    color: var(--neutral-600);
+}
+.testimonials_description{
+
+}
+.testimonials_description .title h1{
+    color: var(--neutral-600);
+}
+
+.swiper-nav-btns button {
+    padding: 20px;
+    border-radius: 100px;
+    border: 1px solid var(--neutral-300);
+    color: var(--neutral-700);
+
+  }
+  .swiper-nav-btns button:hover {
+    background-color: hsl(60, 3%, 6%, 30%);
+    cursor: pointer;
+  }
+.testimonial_card{
+    width: 100%;
+}
+
+.testimonial_slide img{
+    border-radius: 100px;
+}
+.testimonial_slide blockquote{
+    color: var(--neutral-600);
+}
+.testimonial_slide cite{
+    color:#0B75FB;
+    
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+  
+ 
