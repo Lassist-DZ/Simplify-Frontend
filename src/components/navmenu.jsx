@@ -28,24 +28,21 @@ export default function NavMenu() {
 return <NavigationMenu className="navbar-menu">
 <NavigationMenuList className="nav flex items-start ">
 <NavigationMenuItem className="nav-item py-2 px-4">
-  <Link to="/">
-    <NavigationMenuLink className="nav-link ">
+  <Link to="/" className="nav-link" >
       Home
-    </NavigationMenuLink>
   </Link>
 </NavigationMenuItem>
 <NavigationMenuItem className="nav-item py-2 px-4">
-  <Link to="/about">
-    <NavigationMenuLink className="nav-link">
+  <Link to="/about" className="nav-link">
+  
       About
-    </NavigationMenuLink>
+    
   </Link>
 </NavigationMenuItem>
 <NavigationMenuItem className="nav-item py-2 px-4">
-  <Link to="/services">
-    <NavigationMenuLink className="nav-link">
+  <Link to="/services" className="nav-link">
+   
       Services
-    </NavigationMenuLink>
   </Link>
 </NavigationMenuItem>
 </NavigationMenuList>

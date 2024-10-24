@@ -64,3 +64,24 @@
         border-bottom: 2px solid #1D4ED8;
     
     } 
+.cta_jobs{
+        display: inline-flex;
+        padding: 12px 0px;
+        align-items: center;
+    }
+    .cta_jobs > div {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--primary-base-600);
+        font-size: var(--font-size-hyperlink);
+        font-style: var(--font-style-normal);
+        font-weight: var(--font-weight-500);
+        font-weight: 500;
+        border-bottom: 2px solid transparent;
+    
+    }
+    .cta_jobs:hover>div{
+        border-bottom: 2px solid var(--primary-base-600);
+    
+    } 

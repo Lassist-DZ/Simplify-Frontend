@@ -1,4 +1,3 @@
-import AboutImageContainer from "../../assets/icons/about_image"
 import CTA_Btn from "../cta_button"
 import AboutImage from "../../assets/images/about_image.png"
 import AboutMobile from "../../assets/images/about_image_mobile.png"

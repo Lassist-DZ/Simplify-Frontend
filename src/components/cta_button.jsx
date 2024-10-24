@@ -21,6 +21,18 @@ function CTA_Btn({text, type, onClick}) {
       </div>
         </button>
   }
+  else if (type === "cta_jobs"){
+    return <button className="cta_jobs">
+      <div>
+      {text}
+      </div>
+        </button>
+  }
+  else if (type === "cta_nav") {
+  return  <button className="bg-black rounded-2xl p-4 w-fit text-white">
+    {text}
+  </button>
+  }
   }
   
   export default CTA_Btn

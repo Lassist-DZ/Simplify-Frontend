@@ -23,8 +23,8 @@
     transition: color 0.3s ease-out, border-color 0.3s ease-out;
   }
 .nav .nav-item:hover{
-    border-bottom: 2px solid var(--secondary-200);
-    color: var(--secondary-200);
+    border-bottom: 2px solid var(--secondary-base-300);
+    color: var(--secondary-base-300);
    
 }
  
@@ -37,7 +37,7 @@
 
 
 
-.row::after{
+/* .row::after{
     content: "";
     display: table;
     clear: both;
@@ -74,4 +74,4 @@
     --section-title-color: var(--color-white);
     background-color: var(--color-black);
     --button-color: var(--color-white);
-}
+} */
