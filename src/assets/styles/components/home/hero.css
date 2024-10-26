@@ -1,0 +1,7 @@
+.bg-svg-custom {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='211' height='74' viewBox='0 0 211 74' fill='none'%3E%3Crect x='-2' y='36' width='211.183' height='41.007' rx='13.8875' transform='rotate(-10.426 -2 36)' fill='%23FEDA79'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.hero-section .right-img {
+}
