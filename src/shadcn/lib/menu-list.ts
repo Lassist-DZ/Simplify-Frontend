@@ -4,7 +4,8 @@ import {
   Calendar1,
   LayoutGrid,
   LucideIcon,
-  MailQuestionIcon
+  MailQuestionIcon,
+  Star
 } from "lucide-react";
 
 type Submenu = {
@@ -57,6 +58,11 @@ export function getMenuList(pathname: string): Group[] {
           href: "/admin/newsletter_subs",
           label: "Newsletter Subscribers",
           icon: MailQuestionIcon
+        },
+        {
+          href: "/admin/testimonials",
+          label: "Testimonials",
+          icon: Star
         },
 
       ]

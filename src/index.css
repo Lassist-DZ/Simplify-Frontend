@@ -72,11 +72,15 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.admin-background {
-  background-color: grey;
+.admin-panel-layout {
+  background-color: var(--primary-700);
 }
-
-
+.admin-sidebar{
+  background-color: var(--primary-700);
+}
+.admin-menubar{
+  background-color: var(--primary-700);
+}
 h2{
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-500);
@@ -94,6 +98,13 @@ h1{
   font-weight: var(--font-weight-500);
   font-style: var(--font-style-normal);
   line-height: normal;
+}
+.font-size-paragraph{
+  font-size: var(--font-size-paragraph1);
+  font-weight: var(--font-weight-400);
+  font-style: var(--font-style-normal);
+  line-height: normal;
+  line-height: 1rem;
 }
 .font-size-paragraph-large{
   font-size: var(--font-size-paragraph2);

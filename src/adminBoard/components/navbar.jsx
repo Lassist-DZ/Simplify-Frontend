@@ -4,7 +4,7 @@ import { Button } from "../../shadcn/ui/button";
 
 export function Navbar({ title }) {
   return (
-    <header className="fixed top-0 z-10 w-[80vw] shadow backdrop-blur bg-[#09090B]">
+    <header className="fixed top-0 z-10 w-[80vw] shadow backdrop-blur admin-menubar">
       <div className="mx-4 sm:mx-8 flex h-14 items-center">
         <div className="flex items-center space-x-4 lg:space-x-0">
           <h1 className="font-bold text-white">{title}</h1>

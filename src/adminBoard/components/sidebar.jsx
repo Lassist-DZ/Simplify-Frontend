@@ -15,7 +15,7 @@ const Menu = () => {
   const pathname = useLocation().pathname;
   const menuList = getMenuList(pathname);
   return (
-    <aside className="fixed top-0 left-0 z-20 h-screen w-[20vw] overflow-hidden">
+    <aside className="admin-sidebar fixed top-0 left-0 z-20 h-screen w-[20vw]  overflow-hidden">
 <div className="relative h-full flex flex-col px-3 py-4 overflow-y-auto shadow-md dark:shadow-zinc-800">
   {/* Brand or Logo */}
   <Button className="mb-1" variant="link" asChild>
@@ -26,7 +26,7 @@ const Menu = () => {
 
   <ScrollArea className="">
       <nav className="mt-8 h-full w-full">
-        <ul className="flex flex-col min-h-[calc(100vh-48px-36px-16px-32px)] lg:min-h-[calc(100vh-32px-40px-32px)] items-start space-y-1 px-2">
+        <ul className="flex flex-col min-h-[calc(100vh-48px-36px-16px-32px)] lg:min-h-[calc(100vh-32px-40px-32px)] items-start space-y-1 px-2 ">
           {menuList.map(({ groupLabel, menus }, index) => (
             <li className={cn("w-full", groupLabel ? "pt-5" : "")} key={index}>
               {groupLabel && (

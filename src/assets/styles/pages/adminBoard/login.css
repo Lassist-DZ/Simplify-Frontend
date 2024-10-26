@@ -1,0 +1,6 @@
+.admin-login{
+    background-color: var(--primary-700);
+}
+.admin-login .login-btn{
+    background-color: var(--tertiary2-500);
+}

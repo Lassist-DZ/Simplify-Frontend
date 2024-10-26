@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Dashboard from './adminBoard/pages/dashboard';
-import Login from './adminBoard/pages/login';
 import Page404 from './adminBoard/pages/page404';
 import Menu from './adminBoard/components/sidebar';
 import Consultaitons from './adminBoard/pages/consultations';
@@ -14,6 +13,8 @@ import NewConsultation from './adminBoard/pages/newConsultation';
 import NewsletterSubs from './adminBoard/pages/newsletter_subs';
 import NewSubscriber from './adminBoard/pages/newSubscriber';
 import Home from './pages/home';
+import Login from './pages/adminBoard/login';
+import Testimonials from './adminBoard/pages/testimonials';
 const isLoggedIn = () => {
   return !!localStorage.getItem("token"); 
 };
@@ -34,13 +35,14 @@ function App() {
             path="/admin/*"
             element={
               <AdminRoute>
-                <div className="flex min-h-screen bg-[#09090B]">
-                  <Menu />
+                <div className="flex min-h-screen">
+                 
                   <Routes>
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/consultations" element={<Consultaitons />} />
                     <Route path="/pricings" element={<PricingModel />} />
+                    <Route path="/testimonials" element={<Testimonials />} />
                     <Route path="/pricings/new" element={<NewPricing />} />
                     <Route
                       path="/consultations/new"
