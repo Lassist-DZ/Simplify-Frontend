@@ -6,12 +6,9 @@
 }
 .about_header{
     position: relative;
-    width: fit-content;
+
 }
-.about_header img {
-    width: 655px;
-    height: auto;
-}
+
 .about_header_title{
     color: var(--primary-base-600);
 }

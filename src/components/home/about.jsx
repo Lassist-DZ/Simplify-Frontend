@@ -4,9 +4,9 @@ import AboutMobile from "../../assets/images/about_image_mobile.png"
 import "../../assets/styles/components/home/about.css"
 const About = () => {
     return <section className="about px-8 lg:px-16 pt-[150px] pb-20 grid grid-cols-1 lg:grid-cols-2 gap-4 items-end lg:h-screen">
-        <header className="about_header relative">
+        <header className="about_header relative px-4 flex justify-center">
   <img src={AboutImage} alt="About us image" className="hidden lg:block" />
-  <img src={AboutMobile} alt="About us image" className="lg:hidden px-4" />
+  <img src={AboutMobile} alt="About us image" className="lg:hidden" />
   <h2 className="about_header_title absolute lg:top-6 lg:right-[-110px] bottom-0 left-1/2 transform -translate-x-1/2 lg:left-auto lg:transform-none">
     About Title
   </h2>

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 export default function SimplifyLogo() {
-    return <Link to={"/"}>
-        <svg width="154" height="48" viewBox="0 0 154 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    return <Link to={"/"} aria-label="Simplify Logo">
+        <svg className="lg:w-[154px] h-auto w-[128px] " viewBox="0 0 154 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
     <rect width="154" height="48" fill="url(#pattern0_409_4978)"/>
     <defs>
     <pattern id="pattern0_409_4978" patternContentUnits="objectBoundingBox" width="1" height="1">

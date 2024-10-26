@@ -18,12 +18,13 @@ const Testimonial = () => {
         <div className="title flex flex-col lg:gap-8  gap-6  items-center lg:items-start  lg:justify-center justify-start">
             <h1 className="font-size-display">We are trusted <br/>by our clients </h1>
             <div className="swiper-nav-btns flex gap-4">
-            <button onClick={() => swiperInstance?.slidePrev()}>
-              <ArrowLeft />
-            </button>
-            <button onClick={() => swiperInstance?.slideNext()}>
-              <ArrowRight />
-            </button>
+            <button aria-label="Previous Slide" onClick={() => swiperInstance?.slidePrev()}>
+  <ArrowLeft />
+</button>
+<button aria-label="Next Slide" onClick={() => swiperInstance?.slideNext()}>
+  <ArrowRight />
+</button>
+
           </div>
           </div>
        <Testimonials_Carousel setSwiperInstance={setSwiperInstance}/>

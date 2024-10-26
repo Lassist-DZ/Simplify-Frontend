@@ -3,7 +3,7 @@ import bgHero from "../../assets/images/left-hero.png"
 import CTA_Btn from "../cta_button";
 const Hero = () => {
     return (
-      <div className="hero-section flex gap-0">
+      <div className="hero-section flex gap-0 ">
         {/* Left section with background image and content */}
         <div
           className="bg-cover bg-center bg-no-repeat w-[57%] flex flex-col justify-center p-10"
@@ -11,7 +11,7 @@ const Hero = () => {
             backgroundImage: `url(${bgHero})`,
           }}
         >
-          <h1>Virtual Assistance</h1>
+          <h1 >Virtual Assistance</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
             optio eaque tempora fuga quidem velit perferendis animi dolorem hic,

@@ -54,6 +54,8 @@
   --font-size-paragraph2: 1.5rem;
   --button: 1.25rem;
   --font-size-hyperlink: 1rem;
+  --font-size-button: 1.2rem;
+  --font-weight-600: 600;
   --font-weight-500: 500;
   --font-weight-400:400;
   --font-style-normal: normal;
@@ -99,6 +101,12 @@ h1{
   font-style: var(--font-style-normal);
   line-height: normal;
   line-height: 2.4rem;
+}
+.font-size-button{
+font-size: var(--font-size-button);
+font-style: var(--font-style-normal);
+font-weight: var(--font-weight-600);
+line-height: 1.6875rem 
 }
 
 @media only screen and (max-width: 625px) {

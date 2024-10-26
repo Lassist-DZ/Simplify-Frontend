@@ -5,28 +5,17 @@
 }
 .nav-container{
     position: fixed;
-    backdrop-filter: blur(100px);
-    z-index: 999;
-    width: calc(100% - 128px);
-    margin-top: 20px;
-    margin-left: 64px;
-    margin-right: 64px;
 }
 
 .nav .nav-item{
-    color: var(--neutral-600);
-    font-size: var(--font-size-hyperlink);
-    font-weight: var(--font-weight-500);
-    font-style: var(--font-style-normal);
-    line-height: 1.6875rem;
     border-bottom: 2px solid transparent;
     transition: color 0.3s ease-out, border-color 0.3s ease-out;
   }
 .nav .nav-item:hover{
     border-bottom: 2px solid var(--secondary-base-300);
     color: var(--secondary-base-300);
-   
 }
+
  
  
 
