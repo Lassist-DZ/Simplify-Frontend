@@ -1,7 +1,7 @@
-import CTA_Btn from "../cta_button"
-import AboutImage from "../../assets/images/about_image.png"
-import AboutMobile from "../../assets/images/about_image_mobile.png"
-import "../../assets/styles/components/home/about.css"
+import CTA_Btn from "../cta_button";
+import AboutImage from "../../assets/images/about_image.png";
+import AboutMobile from "../../assets/images/about_image_mobile.png";
+import "../../assets/styles/components/home/about.css";
 const About = () => {
     return <section className="about px-8 lg:px-16 pt-[150px] pb-20 grid grid-cols-1 lg:grid-cols-2 gap-4 items-end lg:h-screen">
         <header className="about_header relative px-4 flex justify-center">
@@ -31,18 +31,16 @@ const About = () => {
         </span>
       </h1>
 
-      <p className="font-size-paragraph-large">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-      </p>
-    </div>
+          <p className="font-size-paragraph-large">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
 
-    <div className="about_cta">
-      <CTA_Btn type={"cta_about"} text={"Learn more"} />
-    </div>
-  </div>
-</section>
-
-   
-}
-export default About
+        <div className="about_cta">
+          <CTA_Btn type={"cta_about"} text={"Learn more"} />
+        </div>
+      </div>
+    </section>
+};
+export default About;
