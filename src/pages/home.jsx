@@ -4,6 +4,7 @@ import About from "../components/home/about";
 import Hero from "../components/home/hero";
 import Testimonial from "../components/home/testimonial";
 import Navbar from "../components/navbar";
+import CtaSection from "../components/home/CtaSection";
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,6 +22,7 @@ const Home = () => {
 
       <Hero />
       <About />
+      <CtaSection />
       <Testimonial />
     </main>
   );
