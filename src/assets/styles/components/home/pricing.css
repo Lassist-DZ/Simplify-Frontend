@@ -1,0 +1,29 @@
+.pricing_section{
+    background: url("../../../icons/pricing_background.svg");
+    background-color: var(--primary-base-600);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.pricing_description_card {
+    border: 1px solid var(--tertiary-base-100);
+    
+}
+
+.pricing_offers {
+    color: var(--neutral-500, #4A4947);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+@media only screen and (max-width:1024px) {
+    .pricing_section {
+        background: url("../../../icons/pricing_background_mobile.svg");
+        background-color: var(--primary-base-600);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

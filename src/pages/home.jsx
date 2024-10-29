@@ -3,6 +3,7 @@ import About from "../components/home/about";
 import Hero from "../components/home/hero";
 import Testimonial from "../components/home/testimonial";
 import Navbar from "../components/navbar";
+import Pricing from "../components/home/pricing";
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +20,7 @@ const Home = () => {
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Hero />
       <About />
+      <Pricing/>
       <Testimonial />
     </main>
   );
