@@ -6,6 +6,7 @@ import Testimonial from "../components/home/testimonial";
 import Navbar from "../components/navbar";
 import CtaSection from "../components/home/CtaSection";
 import JoinUs from "../components/home/JoinUS";
+import Pricing from "../components/home/pricing";
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,6 +25,7 @@ const Home = () => {
       <Hero />
       <About />
       <CtaSection />
+      <Pricing/>
       <Testimonial />
       <JoinUs />
     </main>

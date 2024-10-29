@@ -32,6 +32,11 @@ function CTA_Btn({ text, type, onClick }) {
       </button>
     );
   }
+  else if (type === "cta_pricing") {
+    return  <button className="cta_pricing rounded-[10px] font-size-paragraph px-14 py-3 w-fit">
+    {text}
+  </button>
+  }
 }
 
 export default CTA_Btn;
