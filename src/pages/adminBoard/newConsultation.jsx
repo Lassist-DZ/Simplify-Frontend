@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ContentLayout } from "../content-layout";
+import { ContentLayout } from "../../components/adminDashboard/content-layout";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -9,7 +9,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "../../shadcn/ui/breadcrumb";
-import FormControl from "../components/FormControl";
+import FormControl from "../../adminBoard/components/FormControl";
 import createConsultation from "../../functions/createConsultation";
 import { Button } from "../../shadcn/ui/button";
 

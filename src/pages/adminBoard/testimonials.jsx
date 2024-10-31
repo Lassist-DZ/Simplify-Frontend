@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../../shadcn/ui/button";
-import { ContentLayout } from "../content-layout";
+import { ContentLayout } from "../../components/adminDashboard/content-layout";
 import { useState, useEffect } from "react";
 import fetchTestimonials from "../../functions/fetchTestimonials";
 import {
@@ -12,7 +12,7 @@ import {
   BreadcrumbSeparator,
 } from "../../shadcn/ui/breadcrumb";
 import { Pencil, Trash } from "lucide-react";
-import TableLayout from "../table-layout";
+import TableLayout from "../../adminBoard/table-layout";
 import { TableCell } from "../../shadcn/ui/table";
 
 export default function Testimonials() {

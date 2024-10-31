@@ -1,20 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Dashboard from './adminBoard/pages/dashboard';
+import Dashboard from './pages/adminBoard/dashboard';
 import Page404 from './adminBoard/pages/page404';
-import Menu from './adminBoard/components/sidebar';
-import Consultaitons from './adminBoard/pages/consultations';
-import PricingModel from './adminBoard/pages/pricing';
-import NewPricing from './adminBoard/pages/newPricing';
+import Consultaitons from './pages/adminBoard/consultations';
+import PricingModel from './pages/adminBoard/pricing';
+import NewPricing from './pages/adminBoard/newPricing';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
-import NewConsultation from './adminBoard/pages/newConsultation';
-import NewsletterSubs from './adminBoard/pages/newsletter_subs';
-import NewSubscriber from './adminBoard/pages/newSubscriber';
+import NewConsultation from './pages/adminBoard/newConsultation';
+import NewsletterSubs from './pages/adminBoard/newsletter_subs';
+import NewSubscriber from './pages/adminBoard/newSubscriber';
 import Home from './pages/home';
 import Login from './pages/adminBoard/login';
-import Testimonials from './adminBoard/pages/testimonials';
+import Testimonials from './pages/adminBoard/testimonials';
 const isLoggedIn = () => {
   return !!localStorage.getItem("token"); 
 };

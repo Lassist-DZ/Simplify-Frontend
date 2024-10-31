@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../../shadcn/ui/button";
-import { ContentLayout } from "../content-layout";
+import { ContentLayout } from "../../components/adminDashboard/content-layout";
 import { useState, useEffect } from "react";
 import {
   Breadcrumb,
@@ -11,8 +11,7 @@ import {
   BreadcrumbSeparator,
 } from "../../shadcn/ui/breadcrumb";
 import { Pencil, Trash } from "lucide-react";
-import axios from "axios";
-import TableLayout from "../table-layout";
+import TableLayout from "../../adminBoard/table-layout";
 import { TableCell } from "../../shadcn/ui/table";
 import fetchPricingModels from "../../functions/fetchPricings";
 
@@ -43,11 +42,23 @@ export default function PricingModel() {
 
   const renderRow = (model) => (
     <>
+      <TableCell className="px-4 py-2 border border-gray-200">
+  <div dangerouslySetInnerHTML={{ __html: model.icon }} />
+</TableCell>
+      <TableCell className="px-4 py-2 border border-gray-200">{model.special_offer}</TableCell>
       <TableCell className="px-4 py-2 border border-gray-200">{model.category}</TableCell>
       <TableCell className="px-4 py-2 border border-gray-200">{model.assistants_count}</TableCell>
       <TableCell className="px-4 py-2 border border-gray-200">{model.users_count}</TableCell>
       <TableCell className="px-4 py-2 border border-gray-200">{model.price_per_hour} DZD</TableCell>
-      <TableCell className="px-4 py-2 border border-gray-200">{model.services}</TableCell>
+      <TableCell className="px-4 py-2 border border-gray-200">
+  <ul>
+    {model.services.split(',').map((service, index) => (
+      <li key={index}>{service.trim()}</li>
+    ))}
+  </ul>
+</TableCell>
+
+
     </>
   );
 
@@ -98,7 +109,7 @@ export default function PricingModel() {
 
       <TableLayout
         content_ar={pricingModels}
-        headers={["Plan", "Provided Assistants", "Allowed Users", "Price Per Hour", "Offers"]}
+        headers={["Icon", "Special Offer","Plan", "Provided Assistants", "Allowed Users", "Price Per Hour", "Offers"]}
         renderRow={renderRow}
         actions={renderActions}
       />

@@ -5,7 +5,7 @@ const createConsultation = async (setLoading, newPricingModel, setError) => {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/api/consultations/create_consultation",
+        "https://simplify-backend-p6g56yj6r-simplify-f26de8d1.vercel.app/api/consultations/create_consultation",
         newPricingModel
       );
       toast.success(response.data.message, {

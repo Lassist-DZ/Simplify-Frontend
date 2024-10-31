@@ -1,11 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../../shadcn/ui/button";
-import { ContentLayout } from "../content-layout";
+import { ContentLayout } from "../../components/adminDashboard/content-layout";
 import { useState, useEffect } from "react";
 import fetchConsultations from "../../functions/fetchConsultations";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator} from "../../shadcn/ui/breadcrumb";
 import { Pencil, Trash } from "lucide-react";
-import TableLayout from "../table-layout";
+import TableLayout from "../../adminBoard/table-layout";
 import { TableCell } from "../../shadcn/ui/table";
 import loggout from "../../functions/loggout";
 

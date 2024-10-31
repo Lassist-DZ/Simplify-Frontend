@@ -5,7 +5,7 @@ const createSubscriber = async (setLoading, newPricingModel, setError) => {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/api/newsletter_subs/create_subscriber",
+        "https://simplify-backend-p6g56yj6r-simplify-f26de8d1.vercel.app/api/newsletter_subs/create_subscriber",
         newPricingModel
       );
       toast.success(response.data.message, {

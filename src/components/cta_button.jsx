@@ -2,15 +2,23 @@ import { MoveUpRight } from "lucide-react";
 import RightArrow from "../assets/icons/right-arrow";
 import "../assets/styles/components/cta_button.css";
 
-function CTA_Btn({ text, type, onClick }) {
+function CTA_Btn({ text, type }) {
   if (type === "cta_hero") {
     return (
-      <button className="cta_hero p-6  gap-2">
+      <button className={`cta_hero p-6  gap-2 hidden lg:inline-flex`}>
         <RightArrow />
         <div className="label">{text}</div>
       </button>
     );
-  } else if (type === "cta_about") {
+  } if (type === "cta_hero_mobile") {
+    return (
+      <button className={`cta_hero_mobile p-6  gap-2 lg:hidden`}>
+        <RightArrow />
+        <div className="label">{text}</div>
+      </button>
+    );
+  }
+  else if (type === "cta_about") {
     return (
       <button className="cta_about">
         <div>

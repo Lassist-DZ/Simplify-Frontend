@@ -4,10 +4,11 @@ const createNewModel = async (setLoading, newPricingModel, setError) => {
     try {
       setLoading(true);
 
-      const response = await axios.post(
-        "http://localhost:5000/api/pricing/create_pricing",
-        newPricingModel
-      );
+      const response = await axios.post("https://simplify-backend-p6g56yj6r-simplify-f26de8d1.vercel.app/api/pricing/create_pricing", newPricingModel, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       toast.success(response.data.message, {
         position: "bottom-right",
         autoClose: 5000,

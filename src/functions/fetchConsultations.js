@@ -4,15 +4,16 @@ const fetchConsultations = async (setLoading, token, setConsultations, navigate,
     try {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:5000/api/consultations/get_consultations_all",
+        "https://simplify-backend-p6g56yj6r-simplify-f26de8d1.vercel.app/api/consultations/get_consultations_all",
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         }
       );
-      if (response.statusText === "OK") {
+      if (response.status === 200) {
         setConsultations(response.data);
+        
       }
       setLoading(false);
     } catch (err) {

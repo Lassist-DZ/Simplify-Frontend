@@ -8,7 +8,7 @@
 
 .pricing_description_card {
     border: 1px solid var(--tertiary-base-100);
-    
+    height: fit-content !important;
 }
 
 .pricing_offers {

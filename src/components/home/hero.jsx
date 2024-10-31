@@ -5,16 +5,16 @@ import "../../assets/styles/components/home/hero.css";
 
 const Hero = () => {
   return (
-    <div className="hero-section flex flex-col md:flex-row gap-0">
+    <section className="hero-section flex flex-col  lg:flex-row gap-0 lg:h-auto h-screen">
       {/* Left section with background image and content */}
       <div
-        className="bg-cover bg-center bg-no-repeat w-full md:w-[57%] flex flex-col justify-center"
+        className="bg-cover bg-center bg-no-repeat w-full lg:w-[57%] flex flex-col justify-center lg:h-auto h-screen"
         style={{
           backgroundImage: `url(${bgHero})`,
         }}
       >
-        <div className="px-8 lg:px-16 pt-40 flex flex-col items-center md:items-start text-center md:text-left">
-          <div>
+        <div className="px-8 lg:px-16 pt-14  lg:pt-20 flex flex-col gap-8 items-center lg:items-start text-center lg:text-left">
+          <div className="flex flex-col gap-6">
             <p className="font-size-display text-neutral-600">
               <span className="bg-svg-custom inline-block">Virtual</span>{" "}
               Assistance
@@ -29,6 +29,7 @@ const Hero = () => {
 
           <div>
             <CTA_Btn type={"cta_hero"} text={"Explore Now"} />
+            <CTA_Btn type={"cta_hero_mobile"} text={"Explore Now"} />
           </div>
         </div>
       </div>
@@ -37,7 +38,7 @@ const Hero = () => {
       <div className="right-img w-full md:w-[43%] hidden md:block">
         <img src={heroImg} alt="Hero" className="w-full h-full object-cover" />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,7 +1,7 @@
 
 import { Card, CardContent } from '../../shadcn/ui/card'
 import {Link, useNavigate} from "react-router-dom";
-import { ContentLayout } from "../content-layout";
+import { ContentLayout } from '../../components/adminDashboard/content-layout';
 import {
   Breadcrumb,
   BreadcrumbItem,

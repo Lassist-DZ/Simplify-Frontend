@@ -7,7 +7,7 @@ const About = () => {
         <header className="about_header relative px-4 flex justify-center">
   <img src={AboutImage} alt="About us image" className="hidden lg:block" />
   <img src={AboutMobile} alt="About us image" className="lg:hidden" />
-  <h2 className="about_header_title absolute lg:top-6 lg:right-[-110px] bottom-0 left-1/2 transform -translate-x-1/2 lg:left-auto lg:transform-none">
+  <h2 className="about_header_title absolute lg:top-6 lg:right-[-110px]  left-1/2 hidden lg:block lg:left-auto">
     About Title
   </h2>
 </header>

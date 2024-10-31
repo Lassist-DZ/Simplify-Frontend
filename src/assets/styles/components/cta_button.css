@@ -42,6 +42,14 @@
   transform: translateX(0);
 }
 
+.cta_hero_mobile{
+    display: inline-flex;
+    align-items: center;
+    border-radius: 100px;
+    color: var(--neutral-white);
+    background-color: var(--neutral-700);
+}
+
 .cta_about {
   display: inline-flex;
   padding: 12px 0px;

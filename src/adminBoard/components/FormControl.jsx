@@ -16,8 +16,13 @@ const FormControl = ({ formData, onInputChange, fields, title }) => {
                 type={field.type}
                 attribute={field.attribute}
                 placeholder={field.placeholder}
-                value={formData[field.attribute]}
-                onChange={(e) => onInputChange(e.target.id, e.target.value)}
+                value={field.type === 'file' ? undefined : formData[field.attribute]}
+                onChange={(e) =>
+                  onInputChange(
+                    field.attribute,
+                    field.type === "file" ? e.target.files[0] : e.target.value
+                  )
+                }
               />
             ))}
           </form>

@@ -34,7 +34,7 @@ const handleLogin = async (e, setLoading, setError, email, password, navigate) =
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login", {
+        "https://simplify-backend-p6g56yj6r-simplify-f26de8d1.vercel.app/api/auth/login", {
         email,
         password,
       });

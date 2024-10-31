@@ -1,5 +1,5 @@
-import { Navbar } from "./components/navbar";
-import Menu from "./components/sidebar";
+import { Navbar } from "../../adminBoard/components/navbar";
+import Menu from "../../adminBoard/components/sidebar";
 export function ContentLayout({ title, children }) {
     return (
       <div className="admin-panel-layout w-[80vw] mt-8 ml-[20vw]">
