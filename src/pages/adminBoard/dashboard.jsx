@@ -75,7 +75,7 @@ const Dashboard = () => {
       </BreadcrumbList>
     </Breadcrumb>
     here will be the latest notifications about the ones who subscribed to the newsletter, the latest ones who filled the form and asked for consultation, a button that takes to all content creation buttons
-    <Card className="mb-4">
+    {/* <Card className="mb-4">
           <CardContent>
           <div className='col' xs={6}>
                 <div className="border-l-4 border-blue-500 p-3">
@@ -87,7 +87,7 @@ const Dashboard = () => {
 
            
           </CardContent>
-        </Card>
+        </Card> */}
   </ContentLayout>
   )
 }
