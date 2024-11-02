@@ -7,18 +7,19 @@ import Navbar from "../components/navbar";
 import CtaSection from "../components/home/CtaSection";
 import JoinUs from "../components/home/JoinUS";
 import Pricing from "../components/home/pricing";
+import FAQ from "../components/home/FAQ";
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <main className="relative">
-      {isMenuOpen && (
+      {/* {isMenuOpen && (
         <div
           className="fixed inset-0 bg-black opacity-55 z-[998]"
           onClick={() => setIsMenuOpen(false)}
         />
-      )}
+      )} */}
 
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
@@ -27,7 +28,9 @@ const Home = () => {
       <CtaSection />
       <Pricing/>
       <Testimonial />
+      <FAQ/>
       <JoinUs />
+
     </main>
   );
 };

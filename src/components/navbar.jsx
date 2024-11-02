@@ -18,15 +18,15 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
   return (
     <header
       className={`${
-        isMenuOpen ? "mt-0 pt-10 ml-6" : "rounded-[100px] mt-5 h-[62px] mx-6"
-      } z-[999] lg:mx-16 nav-container lg:mt-5 flex items-center justify-between gap-20 px-6 lg:px-16 lg:h-[90px] py-5 lg:rounded-[100px] lg:bg-white lg:bg-opacity-20`}
+        isMenuOpen ? "bg-black bg-opacity-55 h-full  pt-8  px-12 items-start" : "rounded-[100px] mt-5 h-[62px] mx-6 items-center"
+      } z-[999] fixed lg:mx-16 nav-container lg:mt-5 flex lg:items-center  justify-between gap-20 px-6 lg:px-16 lg:h-[90px] py-5 lg:rounded-[100px] lg:bg-white lg:bg-opacity-20`}
       style={{
         backdropFilter: isMenuOpen ? "" : "blur(100px)",
         width:
           window.innerWidth >= 1024
             ? "calc(100% - 128px)"
             : isMenuOpen
-            ? "calc(100% - 24px)"
+            ? "calc(100%)"
             : "calc(100% - 48px)",
             
       }}
@@ -47,9 +47,9 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
       <NavigationMenu
         className={`${
           isMenuOpen
-            ? "flex h-[90vh] inset-0 bg-opacity-20 bg-white items-start font-size-button text-white"
+            ? "flex h-screen translate-x-0 inset-0 bg-opacity-20 bg-white items-start font-size-button text-white"
             : "hidden font-size-hyperlink text-[#2a2928]"
-        } absolute lg:static lg:flex flex-col lg:flex-row lg:text-[#2a2928] lg:items-center gap-4 lg:p-0 p-8 pt-16 lg:bg-transparent lg:justify-between lg:font-size-hyperlink`}
+        } fixed lg:static lg:flex flex-col lg:flex-row lg:text-[#2a2928] lg:items-center gap-4 lg:p-0 p-8 pt-16 lg:bg-transparent lg:justify-between lg:font-size-hyperlink`}
         style={{
           backdropFilter: isMenuOpen ? "blur(100px)" : "none",
         }}

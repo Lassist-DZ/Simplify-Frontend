@@ -3,7 +3,7 @@ const fetchTestimonials = async (setLoading, setPricingModels, setError) => {
     try {
       setLoading(true);
       const response = await axios.get(
-        "https://simplify-backend-p6g56yj6r-simplify-f26de8d1.vercel.app/api/testimonials/get_testimonials_all"
+        "https://simplify-backend-lsp2h66f1-simplify-f26de8d1.vercel.app/api/testimonials/get_testimonials_all"
       );
 
       if (response.status === 200) {

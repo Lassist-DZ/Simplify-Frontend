@@ -104,13 +104,13 @@ h1 {
   font-weight: var(--font-weight-400);
   font-style: var(--font-style-normal);
   line-height: normal;
-  line-height: 1rem;
+  line-height: 1.9rem;
 }
 .font-size-paragraph2{
   font-size: var(--font-size-paragraph2);
   font-weight: var(--font-weight-400);
   font-style: var(--font-style-normal);
-  line-height: 1.125rem;
+  line-height: 2rem;
 }
 .font-size-paragraph-large{
   font-size: var(--font-size-paragraph3);

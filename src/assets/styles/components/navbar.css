@@ -3,9 +3,7 @@
     --transition-duration: 0.3s;
     --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
 }
-.nav-container{
-    position: fixed;
-}
+
 
 .nav .nav-item{
     border-bottom: 2px solid transparent;

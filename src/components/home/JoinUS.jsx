@@ -1,5 +1,6 @@
 import React from "react";
 import backGround from "../../assets/images/about_us_img.png";
+import { Mail } from "lucide-react";
 
 const RightArrow = () => {
   return (
@@ -10,7 +11,7 @@ const RightArrow = () => {
         viewBox="0 0 203 60"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="m-0 absolute right-52 top-12 bottom-0 hidden min-[1115px]:block"
+        className="m-0 absolute right-[222px] top-8 bottom-0 hidden min-[1115px]:block"
       >
         <g clipPath="url(#clip0_462_5191)">
           <path
@@ -35,12 +36,12 @@ const RightArrow = () => {
 
 const JoinUs = () => {
   return (
-    <div className=" bg-black  m-8 md:m-40 rounded-3xl max-w-[990px]">
+    <section className="m-8 rounded-3xl px-20">
       <div
-        className="gap-0 min-h-[238px] max-w-[990px] mb-14 relative flex flex-col md:flex-row items-center justify-between text-white p-8  rounded-3xl shadow-lg space-y-4 md:space-y-0 md:space-x-6  mx-auto"
+        className="gap-0 min-h-[238px] mb-14 relative  flex flex-col md:flex-row items-center justify-between text-white p-8  rounded-3xl shadow-lg space-y-4"
         style={{
+          backgroundColor: "black",
           backgroundImage: `url(${backGround})`,
-          backgroundBlendMode: "overlay",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -53,11 +54,12 @@ const JoinUs = () => {
           </p>
         </div>
         <RightArrow />
-        <button className="lg:relative lg:right-9 bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition duration-300 shadow-lg ">
+        <button className="lg:relative lg:right-9 bg-white text-black px-6 py-3 flex gap-2 rounded-full font-medium hover:bg-gray-200 transition duration-300 shadow-lg ">
+         <Mail/>
           Let's connect
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
