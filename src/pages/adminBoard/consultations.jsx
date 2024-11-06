@@ -35,6 +35,7 @@ export default function Consultations() {
       <TableCell className="px-4 py-2 border border-gray-200">{consultation.full_name}</TableCell>
       <TableCell className="px-4 py-2 border border-gray-200">{consultation.email}</TableCell>
       <TableCell className="px-4 py-2 border border-gray-200">{consultation.phone_number}</TableCell>
+      <TableCell className="px-4 py-2 border border-gray-200">{consultation.plan}</TableCell>
       <TableCell className="px-4 py-2 border border-gray-200">{consultation.why_interested}</TableCell>
     </>
   );
@@ -86,7 +87,7 @@ export default function Consultations() {
 
       <TableLayout
         content_ar={consultations}
-        headers={["Full Name", "Email", "Phone Number", "Why Interested"]}
+        headers={["Full Name", "Email", "Phone Number","Plan", "Why Interested"]}
         renderRow={renderRow}
         actions={renderActions}
       />

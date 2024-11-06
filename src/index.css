@@ -71,6 +71,9 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+html{
+  overflow-x: hidden;
+}
 
 .admin-panel-layout {
   background-color: var(--primary-700);
@@ -89,6 +92,18 @@ h2 {
 }
 h1 {
   font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-500);
+  font-style: var(--font-style-normal);
+  line-height: normal;
+}
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-500);
+  font-style: var(--font-style-normal);
+  line-height: normal;
+}
+h3 {
+  font-size: var(--font-size-h3);
   font-weight: var(--font-weight-500);
   font-style: var(--font-style-normal);
   line-height: normal;
@@ -123,6 +138,12 @@ h1 {
   font-size: var(--font-size-button);
   font-style: var(--font-style-normal);
   font-weight: var(--font-weight-600);
+  line-height: 1.6875rem;
+}
+.font-size-hyperlink {
+  font-size: var(--font-size-hyperlink);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-500);
   line-height: 1.6875rem;
 }
 

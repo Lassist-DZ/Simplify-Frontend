@@ -19,6 +19,7 @@ export default function NewConsultation() {
     email: "",
     phone_number: "",
     why_interested: "",
+    plan: ""
   });
 
   const [error, setError] = useState(null);
@@ -30,11 +31,11 @@ export default function NewConsultation() {
       [field]: value,
     }));
   };
-
   const consultationFields = [
     { type: "text", attribute: "full_name", placeholder: "Enter full name" },
     { type: "email", attribute: "email", placeholder: "Enter email" },
     { type: "number", attribute: "phone_number", placeholder: "Enter phone number" },
+    { type: "select", attribute: "plan", placeholder: "What type of plan are you interested in ?" },
     { type: "textarea", attribute: "why_interested", placeholder: "Why are you interested in consultation?" }
   ];
 
@@ -68,7 +69,7 @@ export default function NewConsultation() {
           title="Consultation Details"
         />
         <div className="mt-6 flex justify-center">
-          <Button onClick={() => createConsultation(setLoading,newConsultation, setError)} className="bg-blue-700 rounded text-white" isLoading={loading}>
+          <Button onClick={() => createConsultation(setLoading,newConsultation, setError)} className="bg-blue-700 rounded text-white" >
             {loading ? "Creating..." : "Create Consultation"}
           </Button>
         </div>

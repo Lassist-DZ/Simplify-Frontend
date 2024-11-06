@@ -5,7 +5,7 @@ const createConsultation = async (setLoading, newPricingModel, setError) => {
       setLoading(true);
 
       const response = await axios.post(
-        "https://simplify-backend-p6g56yj6r-simplify-f26de8d1.vercel.app/api/consultations/create_consultation",
+        "https://simplify-backend-ap9i58wxa-simplify-f26de8d1.vercel.app/api/consultations/create_consultation",
         newPricingModel
       );
       toast.success(response.data.message, {
@@ -20,7 +20,9 @@ const createConsultation = async (setLoading, newPricingModel, setError) => {
         transition: Bounce,
         });
       setLoading(false);
-      window.location.href = '/admin/consultations'; 
+      if (window.location.pathname === "/admin/consultations/new") {
+        window.location.href = "/admin/consultations";
+      }
     } catch (err) {
       console.log(err);
       toast.error(err.response.data.message, {

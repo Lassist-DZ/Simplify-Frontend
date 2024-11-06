@@ -36,7 +36,7 @@ const RightArrow = () => {
 
 const JoinUs = () => {
   return (
-    <section className="m-8 rounded-3xl px-20">
+    <section className="m-8 rounded-3xl lg:px-20">
       <div
         className="gap-0 min-h-[238px] mb-14 relative  flex flex-col md:flex-row items-center justify-between text-white p-8  rounded-3xl shadow-lg space-y-4"
         style={{

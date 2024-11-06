@@ -14,18 +14,12 @@ const Home = () => {
 
   return (
     <main className="relative">
-      {/* {isMenuOpen && (
-        <div
-          className="fixed inset-0 bg-black opacity-55 z-[998]"
-          onClick={() => setIsMenuOpen(false)}
-        />
-      )} */}
 
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
 
       <Hero />
       <About />
-      <CtaSection />
+      {/* <CtaSection /> */}
       <Pricing/>
       <Testimonial />
       <FAQ/>

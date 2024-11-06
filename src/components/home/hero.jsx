@@ -2,7 +2,7 @@ import heroImg from "../../assets/images/hero-img.png";
 import bgHero from "../../assets/images/left-hero.png";
 import CTA_Btn from "../cta_button";
 import "../../assets/styles/components/home/hero.css";
-
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section className="hero-section flex flex-col  lg:flex-row gap-0 lg:h-auto h-screen">
@@ -28,8 +28,11 @@ const Hero = () => {
           </div>
 
           <div>
-            <CTA_Btn type={"cta_hero"} text={"Explore Now"} />
-            <CTA_Btn type={"cta_hero_mobile"} text={"Explore Now"} />
+           <Link to={"./contact_us"}>
+           <CTA_Btn type={"cta_hero"} text={"Explore Now"} />
+           <CTA_Btn type={"cta_hero_mobile"} text={"Explore Now"} />
+           </Link>
+           
           </div>
         </div>
       </div>

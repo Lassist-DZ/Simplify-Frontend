@@ -14,6 +14,8 @@ import NewSubscriber from './pages/adminBoard/newSubscriber';
 import Home from './pages/home';
 import Login from './pages/adminBoard/login';
 import Testimonials from './pages/adminBoard/testimonials';
+import Contacts from './pages/contacts';
+import About from './pages/about';
 const isLoggedIn = () => {
   return !!localStorage.getItem("token"); 
 };
@@ -30,6 +32,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path='/' element={<Home/>}/>
           <Route path='/home' element={<Home/>}/>
+          <Route path='/contact_us' element={<Contacts/>}/>
+          <Route path='/about' element={<About/>}/>
           <Route
             path="/admin/*"
             element={

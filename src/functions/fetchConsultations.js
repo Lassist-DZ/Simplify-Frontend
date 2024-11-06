@@ -13,6 +13,7 @@ const fetchConsultations = async (setLoading, token, setConsultations, navigate,
       );
       if (response.status === 200) {
         setConsultations(response.data);
+        console.log(response.data)
         
       }
       setLoading(false);
