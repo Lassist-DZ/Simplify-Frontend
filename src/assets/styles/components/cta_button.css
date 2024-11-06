@@ -92,4 +92,46 @@
     border: 1px solid var(--neutral-100);
     color: var(--neutral-black);
 }
+/* .cta_nav{
+  max-height: 46px;
+}
+.cta_nav .container{
+  
+ 
+  overflow: visible;
+  
+}
+.cta_nav:hover .container{
+height: auto;
+
+  transform: translateY(-30px);
+} */
+.cta_nav{
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.cta_nav::before{
+  content: "";
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: red;
+  width: 170px;
+  height: 48px;
+  z-index: -1;
+  overflow: hidden;
+}
+.cta_nav .container{
+  transform: translateY(0);
+ 
+  overflow: hidden;
+  transition: transform 0.8s ease-out;
+}
+.cta_nav:hover .container{
+  transform: translateY(-40px);
+}
+
+
 /*Nab var cta style*/

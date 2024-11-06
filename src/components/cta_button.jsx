@@ -35,8 +35,16 @@ function CTA_Btn({ text, type }) {
     );
   } else if (type === "cta_nav") {
     return (
-      <button className="bg-black rounded-2xl p-4 w-fit text-white">
+      <button className="cta_nav flex flex-col rounded-2xl p-3  w-fit text-white">
+       <div className="container flex flex-col gap-3">
+       <div>
+        {text}    
+        </div>
+        <div>
         {text}
+        </div>
+        
+       </div>
       </button>
     );
   }

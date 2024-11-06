@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Footer from "../components/footer";
+
 import About from "../components/home/about";
 import Hero from "../components/home/hero";
 import Testimonial from "../components/home/testimonial";
