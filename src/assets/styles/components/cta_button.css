@@ -42,12 +42,12 @@
   transform: translateX(0);
 }
 
-.cta_hero_mobile{
-    display: inline-flex;
-    align-items: center;
-    border-radius: 100px;
-    color: var(--neutral-white);
-    background-color: var(--neutral-700);
+.cta_hero_mobile {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 100px;
+  color: var(--neutral-white);
+  background-color: var(--neutral-700);
 }
 
 .cta_about {
@@ -88,9 +88,9 @@
 .cta_jobs:hover > div {
   border-bottom: 2px solid var(--primary-base-600);
 }
-.cta_pricing{
-    border: 1px solid var(--neutral-100);
-    color: var(--neutral-black);
+.cta_pricing {
+  border: 1px solid var(--neutral-100);
+  color: var(--neutral-black);
 }
 /* .cta_nav{
   max-height: 46px;
@@ -106,32 +106,102 @@ height: auto;
 
   transform: translateY(-30px);
 } */
-.cta_nav{
+.cta_nav {
+  background-color: #243a4e; /* Example background color */
+  color: white;
+  display: flex;
+  width: 173px;
+
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 25px 20px;
+  width: fit-content;
+  overflow: hidden;
   position: relative;
-  z-index: 1;
-  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
-.cta_nav::before{
-  content: "";
-  border-radius: 10px;
-  top: 0;
-  left: 0;
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden-text,
+.hidden-text2 {
   position: absolute;
-  background-color: red;
-  width: 170px;
-  height: 48px;
-  z-index: -1;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  white-space: nowrap;
 }
-.cta_nav .container{
+
+/* Initially display only the first text */
+.hidden-text {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hidden-text2 {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+/* On hover, transition from first text to second text */
+.cta_nav:hover .hidden-text {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+.cta_nav:hover .hidden-text2 {
+  opacity: 1;
   transform: translateY(0);
- 
+}
+
+/*join us cta style*/
+
+.cta_joinus {
+  background-color: white; /* Initial background color */
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+
+  width: 185px;
+  height: 56px;
   overflow: hidden;
-  transition: transform 0.8s ease-out;
-}
-.cta_nav:hover .container{
-  transform: translateY(-40px);
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Initially display only the first text */
+.hidden-text {
+  opacity: 1;
+  transform: scale(1);
+}
 
-/*Nab var cta style*/
+.hidden-text2 {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+/* On hover, transition from first text to second text and change background color */
+.cta_joinus:hover {
+  background-color: #243a4e; /* New background color on hover */
+  color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cta_joinus:hover .hidden-text {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+.cta_joinus:hover .hidden-text2 {
+  opacity: 1;
+  transform: translateY(0);
+}

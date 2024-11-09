@@ -1,6 +1,7 @@
 import React from "react";
 import backGround from "../../assets/images/about_us_img.png";
 import { Mail } from "lucide-react";
+import CTA_Btn from "../cta_button";
 
 const RightArrow = () => {
   return (
@@ -54,10 +55,11 @@ const JoinUs = () => {
           </p>
         </div>
         <RightArrow />
-        <button className="lg:relative lg:right-9 bg-white text-black px-6 py-3 flex gap-2 rounded-full font-medium hover:bg-gray-200 transition duration-300 shadow-lg ">
+        {/*<button className="lg:relative lg:right-9 bg-white text-black px-6 py-3 flex gap-2 rounded-full font-medium hover:bg-gray-200 transition duration-300 shadow-lg ">
          <Mail/>
           Let's connect
-        </button>
+        </button>*/}
+        <CTA_Btn type={"cta_joinus"} />
       </div>
     </section>
   );

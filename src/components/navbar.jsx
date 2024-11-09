@@ -18,7 +18,9 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
   return (
     <header
       className={`${
-        isMenuOpen ? "bg-black bg-opacity-55 h-full  pt-8  px-12 items-start" : "rounded-[100px] mt-5 h-[62px] mx-6 items-center"
+        isMenuOpen
+          ? "bg-black bg-opacity-55 h-full  pt-8  px-12 items-start"
+          : "rounded-[100px] mt-5 h-[62px] mx-6 items-center"
       } z-[999] fixed lg:mx-16 nav-container lg:mt-5 flex lg:items-center  justify-between gap-20 px-6 lg:px-16 lg:h-[90px] py-5 lg:rounded-[100px] lg:bg-white lg:bg-opacity-20`}
       style={{
         backdropFilter: isMenuOpen ? "" : "blur(100px)",
@@ -28,10 +30,8 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
             : isMenuOpen
             ? "calc(100%)"
             : "calc(100% - 48px)",
-            
       }}
     >
-     
       <div className="flex items-center z-[999]">
         <SimplifyLogo />
       </div>
@@ -41,7 +41,11 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle Menu"
       >
-        {isMenuOpen ? <X size={36} color="white" /> : <Menu size={36} color="#144760" />}
+        {isMenuOpen ? (
+          <X size={36} color="white" />
+        ) : (
+          <Menu size={36} color="#144760" />
+        )}
       </button>
 
       <NavigationMenu
@@ -57,7 +61,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
         <NavMenu />
         <div className="lg:gap-6 lg:flex-row flex-col hidden lg:flex">
           <CTA_Btn type={"cta_jobs"} text={"Find Job"} />
-          <CTA_Btn type={"cta_nav"} text={"Book a Call"} />
+          <CTA_Btn type={"cta_nav"} text={"Book a Call "} />
         </div>
       </NavigationMenu>
     </header>
