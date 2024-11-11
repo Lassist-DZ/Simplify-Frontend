@@ -56,7 +56,7 @@ export function getMenuList(pathname: string): Group[] {
         },
         {
           href: "/admin/newsletter_subs",
-          label: "Newsletter Subscribers",
+          label: "Newsletter",
           icon: MailQuestionIcon
         },
         {
@@ -64,6 +64,7 @@ export function getMenuList(pathname: string): Group[] {
           label: "Testimonials",
           icon: Star
         },
+        
 
       ]
     }

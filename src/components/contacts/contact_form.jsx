@@ -1,9 +1,9 @@
 import Credentials from "./credentials";
 import "../../assets/styles/components/contacts/contact_form.css"
 import InputField from "../inputField";
-import FormControl from "../../adminBoard/components/FormControl";
+import FormControl from "../FormControl";
 import { Button } from "../../shadcn/ui/button";
-import createConsultation from "../../functions/createConsultation";
+import createConsultation from "../../functions/consultations/createConsultation";
 import { useState } from "react";
 export default function ContactForm() {
     const [newConsultation, setNewConsultation] = useState({

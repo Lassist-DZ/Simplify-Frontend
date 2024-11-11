@@ -1,14 +1,10 @@
-import { Card, CardContent, CardHeader } from '../../shadcn/ui/card';
-import InputField from '../../components/inputField';
+import { Card, CardContent, CardHeader } from '../shadcn/ui/card';
+import InputField from './inputField';
 
-const FormControl = ({ formData, onInputChange, fields, title }) => {
+const FormControl = ({ formData, onInputChange, fields }) => {
   return (
     <div className="w-full">
       <Card className='border-none '>
-       {title &&  <CardHeader>
-          <h3 className=" text-white">{title}</h3>
-        </CardHeader>
-        }
         <CardContent>
           <form>
             {fields.map((field) => (

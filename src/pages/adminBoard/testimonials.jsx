@@ -12,7 +12,7 @@ import {
   BreadcrumbSeparator,
 } from "../../shadcn/ui/breadcrumb";
 import { Pencil, Trash } from "lucide-react";
-import TableLayout from "../../adminBoard/table-layout";
+import TableLayout from "../../components/adminDashboard/table-layout";
 import { TableCell } from "../../shadcn/ui/table";
 
 export default function Testimonials() {

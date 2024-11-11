@@ -75,15 +75,13 @@ html{
   overflow-x: hidden;
 }
 
-.admin-panel-layout {
-  background-color: var(--primary-700);
-}
-.admin-sidebar {
+
+/* .admin-sidebar {
   background-color: var(--primary-700);
 }
 .admin-menubar {
   background-color: var(--primary-700);
-}
+} */
 h2 {
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-500);

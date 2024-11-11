@@ -4,7 +4,7 @@ import { ContentLayout } from "../../components/adminDashboard/content-layout";
 import { useState, useEffect } from "react";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator} from "../../shadcn/ui/breadcrumb";
 import { Pencil, Trash } from "lucide-react";
-import TableLayout from "../../adminBoard/table-layout";
+import TableLayout from "../../components/adminDashboard/table-layout";
 import { TableCell } from "../../shadcn/ui/table";
 import loggout from "../../functions/loggout";
 import fetchNewsletterSubs from "../../functions/fetchNewsletterSubscribers";

@@ -9,7 +9,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "../../shadcn/ui/breadcrumb";
-import FormControl from "../../adminBoard/components/FormControl";
+import FormControl from "../../components/FormControl";
 import { Button } from "../../shadcn/ui/button";
 import createNewModel from "../../functions/createPricingModel";
 

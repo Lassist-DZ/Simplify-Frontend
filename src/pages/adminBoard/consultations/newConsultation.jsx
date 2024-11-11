@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ContentLayout } from "../../components/adminDashboard/content-layout";
+import { ContentLayout } from "../../../components/adminDashboard/content-layout";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,10 +8,10 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "../../shadcn/ui/breadcrumb";
-import FormControl from "../../adminBoard/components/FormControl";
-import createConsultation from "../../functions/createConsultation";
-import { Button } from "../../shadcn/ui/button";
+} from "../../../shadcn/ui/breadcrumb";
+import FormControl from "../../../components/FormControl";
+import createConsultation from "../../../functions/consultations/createConsultation";
+import { Button } from "../../../shadcn/ui/button";
 
 export default function NewConsultation() {
   const [newConsultation, setNewConsultation] = useState({
@@ -41,7 +41,7 @@ export default function NewConsultation() {
 
   return (
     <ContentLayout title="New Consultation">
-      <Breadcrumb className="text-white fixed">
+      <Breadcrumb className="text-[#2a2928] fixed">
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
@@ -69,7 +69,7 @@ export default function NewConsultation() {
           title="Consultation Details"
         />
         <div className="mt-6 flex justify-center">
-          <Button onClick={() => createConsultation(setLoading,newConsultation, setError)} className="bg-blue-700 rounded text-white" >
+          <Button onClick={() => createConsultation(setLoading,newConsultation, setError)} className="bg-[#f47e42] rounded-[10px] text-white" >
             {loading ? "Creating..." : "Create Consultation"}
           </Button>
         </div>

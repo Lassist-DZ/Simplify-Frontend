@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Dashboard from './pages/adminBoard/dashboard';
-import Page404 from './adminBoard/pages/page404';
-import Consultaitons from './pages/adminBoard/consultations';
+import Page404 from './pages/page404';
+import Consultations from './pages/adminBoard/consultations/consultations';
+import NewConsultation from './pages/adminBoard/consultations/newConsultation';
 import PricingModel from './pages/adminBoard/pricing';
 import NewPricing from './pages/adminBoard/newPricing';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
-import NewConsultation from './pages/adminBoard/newConsultation';
 import NewsletterSubs from './pages/adminBoard/newsletter_subs';
 import NewSubscriber from './pages/adminBoard/newSubscriber';
 import Home from './pages/home';
@@ -43,7 +43,7 @@ function App() {
                   <Routes>
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/consultations" element={<Consultaitons />} />
+                    <Route path="/consultations" element={<Consultations />} />
                     <Route path="/pricings" element={<PricingModel />} />
                     <Route path="/testimonials" element={<Testimonials />} />
                     <Route path="/pricings/new" element={<NewPricing />} />

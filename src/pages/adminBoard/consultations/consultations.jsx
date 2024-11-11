@@ -1,13 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "../../shadcn/ui/button";
-import { ContentLayout } from "../../components/adminDashboard/content-layout";
+import { Button } from "../../../shadcn/ui/button";
+import { ContentLayout } from "../../../components/adminDashboard/content-layout";
 import { useState, useEffect } from "react";
-import fetchConsultations from "../../functions/fetchConsultations";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator} from "../../shadcn/ui/breadcrumb";
+import fetchConsultations from "../../../functions/consultations/fetchConsultations";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator} from "../../../shadcn/ui/breadcrumb";
 import { Pencil, Trash } from "lucide-react";
-import TableLayout from "../../adminBoard/table-layout";
-import { TableCell } from "../../shadcn/ui/table";
-import loggout from "../../functions/loggout";
+import TableLayout from "../../../components/adminDashboard/table-layout"
+import { TableCell } from "../../../shadcn/ui/table";
+import loggout from "../../../functions/loggout";
+import deleteAllConsultations from "../../../functions/consultations/deleteAllConsultations";
 
 export default function Consultations() {
   const [consultations, setConsultations] = useState([]);
@@ -46,7 +47,7 @@ export default function Consultations() {
         onClick={() => handleModify(consultation.id)}
         variant="secondary"
         size="small"
-        className="flex items-center space-x-1"
+        className="flex items-center gap-2 text-[#d9b220]"
       >
         <Pencil className="w-4 h-4" />
         <span>Modify</span>
@@ -56,7 +57,7 @@ export default function Consultations() {
         onClick={() => handleDelete(consultation.id)}
         variant="danger"
         size="small"
-        className="flex items-center space-x-1"
+        className="flex items-center gap-2 text-red-500 "
       >
         <Trash className="w-4 h-4" />
         <span>Delete</span>
@@ -66,24 +67,36 @@ export default function Consultations() {
 
   return (
     <ContentLayout title="Consultations">
-      <Breadcrumb className="text-white sticky">
+      <Breadcrumb className="text-[#2a2928] fixed">
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/admin">Home</Link>
+              <Link to="/admin">Home</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Consultations</BreadcrumbPage>
+            <BreadcrumbLink asChild>
+              <Link to="/admin/consultations">Consultations</Link>
+            </BreadcrumbLink>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <Link to={"/admin/consultations/new"}>
-        <Button className="mb-4 bg-blue-800 rounded text-white" variant="outline">
+
+      <div className="mt-16 ">
+     
+      <div className="flex  flex-wrap justify-end gap-4 pb-4">
+        <Link to={"/admin/consultations/new"}>
+        <Button className="bg-[#f47e42] rounded-[10px] text-white">
           Create New Consultation
         </Button>
       </Link>
+      
+        <Button className="text-red-500 rounded-[10px] border border-red-500 bg-white" onClick={()=> deleteAllConsultations(setLoading,setError)}>
+          Delete All Consultations
+        </Button>
+    </div>
+
 
       <TableLayout
         content_ar={consultations}
@@ -91,6 +104,7 @@ export default function Consultations() {
         renderRow={renderRow}
         actions={renderActions}
       />
+      </div>
     </ContentLayout>
   );
 }

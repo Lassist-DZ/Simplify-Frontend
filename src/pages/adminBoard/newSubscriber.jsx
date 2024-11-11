@@ -9,8 +9,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "../../shadcn/ui/breadcrumb";
-import FormControl from "../../adminBoard/components/FormControl";
-import createConsultation from "../../functions/createConsultation";
+import FormControl from "../../components/FormControl";
 import { Button } from "../../shadcn/ui/button";
 import createSubscriber from "../../functions/createSubscriber";
 
