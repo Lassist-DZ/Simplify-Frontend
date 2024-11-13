@@ -9,6 +9,7 @@ import TableLayout from "../../../components/adminDashboard/table-layout"
 import { TableCell } from "../../../shadcn/ui/table";
 import loggout from "../../../functions/loggout";
 import deleteAllConsultations from "../../../functions/consultations/deleteAllConsultations";
+import deleteConsultationByID from "../../../functions/consultations/deleteConsultationByID";
 
 export default function Consultations() {
   const [consultations, setConsultations] = useState([]);
@@ -44,7 +45,7 @@ export default function Consultations() {
   const renderActions = (consultation) => (
     <>
       <Button
-        onClick={() => handleModify(consultation.id)}
+        onClick={() => handleModify(consultation._id)}
         variant="secondary"
         size="small"
         className="flex items-center gap-2 text-[#d9b220]"
@@ -54,7 +55,7 @@ export default function Consultations() {
       </Button>
 
       <Button
-        onClick={() => handleDelete(consultation.id)}
+        onClick={() => deleteConsultationByID(consultation._id, setLoading, setError)}
         variant="danger"
         size="small"
         className="flex items-center gap-2 text-red-500 "
