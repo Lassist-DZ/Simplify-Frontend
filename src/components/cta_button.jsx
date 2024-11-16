@@ -1,4 +1,4 @@
-import { MoveUpRight } from "lucide-react";
+import { Mail, MoveUpRight } from "lucide-react";
 import RightArrow from "../assets/icons/right-arrow";
 import "../assets/styles/components/cta_button.css";
 
@@ -35,16 +35,20 @@ function CTA_Btn({ text, type, icon }) {
     );
   } else if (type === "cta_nav") {
     return (
-      <button className="cta_nav flex flex-col rounded-2xl p-3  w-fit text-white">
-       <div className="container flex flex-col gap-3">
-       <div>
-        {text}    
+<button className="cta_nav overflow-hidden h-[55px] px-5 py-6 rounded-[100px] bg-[#243A4E]">
+<div className="justify-center flex flex-col items-center gap-5 overlow-hidden ">
+       <div className="flex  justify-center items-center gap-2">
+        <Mail size={22} color="white"/>
+        <p className="text-white font-size-hyperlink">{text}</p>    
         </div>
-        <div>
-        {text}
+       <div className="flex justify-center items-center gap-2">
+        <Mail size={22} color="white"/>
+        <p className="text-white font-size-hyperlink">{text}</p>     
         </div>
-        
        </div>
+       
+        
+     
       </button>
     );
   }
@@ -53,8 +57,15 @@ function CTA_Btn({ text, type, icon }) {
     {text}
   </button>
   }
+  else if (type === "cta_apply") {
+   return <button className={` font-size-paragraph px-2  flex items-center gap-2 ${type} bg-[#3290C0] text-white rounded-[10px] px-6 py-2`}>
+  <p>
+  {text}
+  </p>
+</button>
+  }
   else{
-    return  <button className={`${type} font-size-paragraph px-2 py-3 flex items-center gap-2 `}>
+    return  <button className={` font-size-paragraph px-2  flex items-center gap-2 ${type}`}>
       {icon}
     <p className="lg:block hidden">
     {text}

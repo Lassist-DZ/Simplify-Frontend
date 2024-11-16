@@ -5,6 +5,7 @@ import CTA_Btn from "./cta_button";
 import { Menu, X } from "lucide-react";
 import "../assets/styles/components/navbar.css";
 import { NavigationMenu } from "../shadcn/ui/navigation-menu";
+import { Link } from "react-router-dom";
 
 export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
   useEffect(() => {
@@ -32,7 +33,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
       }}
     >
      
-      <div className="flex items-center z-[999]">
+      <div className="flex items-center  z-[999]">
         <SimplifyLogo />
       </div>
 
@@ -49,14 +50,16 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
           isMenuOpen
             ? "flex h-screen translate-x-0 inset-0 bg-opacity-20 bg-white items-start font-size-button text-white"
             : "hidden font-size-hyperlink text-[#2a2928]"
-        } fixed lg:static lg:flex flex-col lg:flex-row lg:text-[#2a2928] lg:items-center gap-4 lg:p-0 p-8 pt-16 lg:bg-transparent lg:justify-between lg:font-size-hyperlink`}
+        } fixed lg:static lg:flex flex-col lg:flex-row lg:text-[#2a2928] lg:items-center gap-20 lg:p-0 p-8 pt-16 lg:bg-transparent lg:justify-between lg:font-size-hyperlink `}
         style={{
           backdropFilter: isMenuOpen ? "blur(100px)" : "none",
         }}
       >
         <NavMenu />
-        <div className="lg:gap-6 lg:flex-row flex-col hidden lg:flex">
+        <div className="lg:gap-6 lg:flex-row items-center flex-col hidden lg:flex">
+          <Link to={"/jobs"}>
           <CTA_Btn type={"cta_jobs"} text={"Find Job"} />
+          </Link>
           <CTA_Btn type={"cta_nav"} text={"Book a Call"} />
         </div>
       </NavigationMenu>

@@ -71,67 +71,34 @@
 }
 .cta_jobs {
   display: inline-flex;
-  padding: 12px 0px;
+  padding: 8px 0px;
+  
   align-items: center;
+  border-bottom: 2px solid transparent;
 }
 .cta_jobs > div {
   display: flex;
   align-items: center;
-  gap: 12px;
+  
   color: var(--primary-base-600);
   font-size: var(--font-size-hyperlink);
   font-style: var(--font-style-normal);
   font-weight: var(--font-weight-500);
   font-weight: 500;
-  border-bottom: 2px solid transparent;
+  
 }
-.cta_jobs:hover > div {
+.cta_jobs:hover {
   border-bottom: 2px solid var(--primary-base-600);
 }
 .cta_pricing{
     border: 1px solid var(--neutral-100);
     color: var(--neutral-black);
 }
-/* .cta_nav{
-  max-height: 46px;
-}
-.cta_nav .container{
-  
- 
-  overflow: visible;
-  
-}
-.cta_nav:hover .container{
-height: auto;
-
-  transform: translateY(-30px);
-} */
-.cta_nav{
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-.cta_nav::before{
-  content: "";
-  border-radius: 10px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  background-color: red;
-  width: 170px;
-  height: 48px;
-  z-index: -1;
-  overflow: hidden;
-}
-.cta_nav .container{
-  transform: translateY(0);
- 
-  overflow: hidden;
+.cta_nav> div{
+  transform: translateY(-10px);
   transition: transform 0.8s ease-out;
+ 
 }
-.cta_nav:hover .container{
-  transform: translateY(-40px);
+.cta_nav:hover>div{
+  transform: translateY(-58px);
 }
-
-
-/*Nab var cta style*/

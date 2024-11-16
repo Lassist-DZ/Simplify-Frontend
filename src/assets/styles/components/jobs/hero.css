@@ -1,0 +1,49 @@
+.jobs_hero-section{
+    background-color: #F2F4FF;
+    position: relative;
+    z-index: -2;
+}
+.jobs_hero-section::before{
+    content: "";
+    background: url("../../../images/jobs_hero_bg2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 48px;
+    left: 30vw;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+.jobs_hero-section .circles_background {
+    background: url("../../../images/jobs_hero_bg.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+.jobs_hero-section .circles_background::before{
+    content: "";
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: calc(50vh - 250px);
+    right: 32px;
+    z-index: -1;
+    background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(94, 94, 247, 0.43) 0%, rgba(94, 94, 247, 0.00) 35.36%);
+
+}
+.jobs_hero-section .circles_background::after{
+    content: "";
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: calc(50vh - 250px);
+    left: 32px;
+    z-index: -1;
+    background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(244, 126, 66, 0.50) 0%, rgba(94, 94, 247, 0.20) 20.36%, rgba(94, 94, 247, 0) 50%);
+}
