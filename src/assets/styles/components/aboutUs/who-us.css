@@ -1,0 +1,59 @@
+/* Container styling */
+.who-us-container {
+  display: grid;
+  grid-template-columns: 435px 435px; /* Two equal columns */
+  padding: 2rem; /* Padding around the container */
+  background-color: white;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  /* Hide images on small screens */
+  .section-image1,
+  .section-image2 {
+    display: none;
+  }
+
+  /* Make container stack sections vertically on small screens */
+  .who-us-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-image1 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 435px;
+  height: 306px;
+}
+.section-image2 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 435px;
+  height: 306px;
+}
+
+/* Who We Are Section Background */
+.section-image1 {
+  background-image: url("../../../images/who-are-we.png");
+}
+
+/* Our Values Section Background */
+.section-image2 {
+  background-image: url("../../../images/our-value.png");
+}
+.section-content h2 {
+  border-bottom: 2px solid var(--tertiary-2-500, #236a8f);
+  width: fit-content;
+  margin-bottom: 20px;
+  padding-right: 12px;
+}
+.section-content p,
+ul {
+  color: #848383;
+}

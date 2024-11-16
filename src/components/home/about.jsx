@@ -4,16 +4,16 @@ import AboutMobile from "../../assets/images/about_image_mobile.png";
 import "../../assets/styles/components/home/about.css";
 import { Link } from "react-router-dom";
 const About = () => {
-    return <section className="about px-8 lg:px-16 pt-[150px] pb-20 grid grid-cols-1 lg:grid-cols-2 gap-4 items-end lg:h-screen">
+    return <section className="about px-8 lg:px-16 lg:pt-[150px] pb-20 grid grid-cols-1 lg:grid-cols-2 gap-4 items-end lg:h-screen">
         <header className="about_header relative px-4 flex justify-center">
   <img src={AboutImage} alt="About us image" className="hidden lg:block" />
   <img src={AboutMobile} alt="About us image" className="lg:hidden" />
-  <h2 className="about_header_title absolute lg:top-6 lg:right-[-110px]  left-1/2 hidden lg:block lg:left-auto">
+  <h2 className="about_header_title absolute lg:top-6 lg:right-[-110px]  left-1/2 hidden lg:block lg:left-auto font-medium">
     About Title
   </h2>
 </header>
-  <div className="about_description flex flex-col justify-between lg:h-[300px]">
-    <div className="about_description_content flex flex-col gap-4">
+  <div className="about_description flex flex-col justify-between gap-10">
+    <div className="about_description_content flex flex-col lg:gap-2 gap-4 ">
       <h1>
         Why you choose{" "}
         <span className="font-size-display">

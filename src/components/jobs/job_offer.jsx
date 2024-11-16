@@ -3,7 +3,7 @@ import JobImg from "../../assets/images/job_img.png"
 import Dot from "../../assets/icons/dot"
 import CTA_Btn from "../cta_button"
 export default function JobOffer() {
-    return <Card className="flex flex-col justify-center items-start gap-4 rounded-[15px] w-[500px]"
+    return <Card className="flex flex-col justify-center items-start gap-4 rounded-[15px] lg:w-[500px]"
     style={{border: "3px solid rgba(94, 94, 247, 0.50)"}}>
         <CardHeader className="flex flex-col items-center gap-4 p-0 min-w-full w-full">
             <img src={JobImg} alt="Job Offer Post Image" className="w-full h-auto rounded-t-[15px] rounded-b-none"/>
@@ -15,7 +15,7 @@ export default function JobOffer() {
         </CardHeader>
         <CardContent className="flex py-4 px-4 flex-col justify-center items-start gap-2">
             <div className="location flex flex-col items-start gap-2">
-                <h6 className="text-black">
+                <h6 className="text-black font-semibold">
                     Location
                 </h6>
                 <div className="flex px-2 flex-col items-start gap-1">
@@ -26,7 +26,7 @@ export default function JobOffer() {
                 </div>
             </div>
             <div className="type flex flex-col items-start gap-2">
-                <h6 className="text-black">
+                <h6 className="text-black font-semibold">
                     Type
                 </h6>
                 <div className="flex px-2 flex-col items-start gap-1">
@@ -45,7 +45,7 @@ export default function JobOffer() {
                 </div>
             </div>
             <div className="salary flex flex-col items-start gap-2">
-                <h6 className="text-black">
+                <h6 className="text-black font-semibold">
                     Salary
                 </h6>
                 <div className="flex px-2 flex-col items-start gap-1">
@@ -58,7 +58,7 @@ export default function JobOffer() {
                 </div>
             </div>
             <div className="job-description flex flex-col items-start gap-2">
-                <h6 className="text-black">
+                <h6 className="text-black font-semibold">
                     Job Description
                 </h6>
                 <div className="flex px-2 flex-col items-start gap-1">
@@ -87,7 +87,7 @@ export default function JobOffer() {
                 </div>
             </div>
             <div className="job-requirements flex flex-col items-start gap-2">
-                <h6 className="text-black">
+                <h6 className="text-black font-semibold">
                     Job Requirements
                 </h6>
                 <div className="flex px-2 flex-col items-start gap-1">

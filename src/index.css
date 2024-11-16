@@ -57,9 +57,9 @@
   --button: 1.25rem;
   --font-size-hyperlink: 1rem;
   --font-size-button: 1.2rem;
-  --font-weight-600: 700;
-  --font-weight-500: 600;
-  --font-weight-400: 500;
+  --font-weight-600: 600;
+  --font-weight-500: 500;
+  --font-weight-400: 400;
   --font-style-normal: normal;
 }
 
@@ -109,7 +109,7 @@ h3 {
 }
 h6 {
   font-size: var(--font-size-h6);
-  font-weight: var(--font-weight-600);
+  font-weight: var(--font-weight-500);
   font-style: var(--font-style-normal);
   line-height: normal;
 }

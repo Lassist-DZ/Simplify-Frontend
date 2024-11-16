@@ -42,12 +42,12 @@
   transform: translateX(0);
 }
 
-.cta_hero_mobile{
-    display: inline-flex;
-    align-items: center;
-    border-radius: 100px;
-    color: var(--neutral-white);
-    background-color: var(--neutral-700);
+.cta_hero_mobile {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 100px;
+  color: var(--neutral-white);
+  background-color: var(--neutral-700);
 }
 
 .cta_about {
@@ -90,9 +90,9 @@
 .cta_jobs:hover {
   border-bottom: 2px solid var(--primary-base-600);
 }
-.cta_pricing{
-    border: 1px solid var(--neutral-100);
-    color: var(--neutral-black);
+.cta_pricing {
+  border: 1px solid var(--neutral-100);
+  color: var(--neutral-black);
 }
 .cta_nav> div{
   transform: translateY(-10px);
@@ -101,4 +101,101 @@
 }
 .cta_nav:hover>div{
   transform: translateY(-58px);
+}
+
+/* .cta_nav {
+  background-color: #243a4e; 
+  color: white;
+  display: flex;
+  width: 173px;
+
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 25px 20px;
+  width: fit-content;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+} */
+
+/* .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.hidden-text,
+.hidden-text2 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.hidden-text {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hidden-text2 {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+/* .cta_nav:hover .hidden-text {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+.cta_nav:hover .hidden-text2 {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+
+.cta_joinus {
+  background-color: white; /* Initial background color */
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+
+  width: 185px;
+  height: 56px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Initially display only the first text */
+.hidden-text {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hidden-text2 {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+/* On hover, transition from first text to second text and change background color */
+.cta_joinus:hover {
+  background-color: #243a4e; /* New background color on hover */
+  color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cta_joinus:hover .hidden-text {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+.cta_joinus:hover .hidden-text2 {
+  opacity: 1;
+  transform: translateY(0);
 }
