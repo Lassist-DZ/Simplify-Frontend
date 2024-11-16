@@ -96,7 +96,7 @@
 }
 .cta_nav> div{
   transform: translateY(-10px);
-  transition: transform 0.8s ease-out;
+  transition: transform 0.3s ease-out;
  
 }
 .cta_nav:hover>div{
