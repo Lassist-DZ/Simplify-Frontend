@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "../../shadcn/ui/button";
-import { ContentLayout } from "../../components/adminDashboard/content-layout";
+import { Button } from "../../../shadcn/ui/button";
+import { ContentLayout } from "../../../components/adminDashboard/content-layout";
 import { useState, useEffect } from "react";
 import {
   Breadcrumb,
@@ -9,11 +9,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "../../shadcn/ui/breadcrumb";
+} from "../../../shadcn/ui/breadcrumb";
 import { Pencil, Trash } from "lucide-react";
-import TableLayout from "../../components/adminDashboard/table-layout";
-import { TableCell } from "../../shadcn/ui/table";
-import fetchPricingModels from "../../functions/fetchPricings";
+import TableLayout from "../../../components/adminDashboard/table-layout";
+import { TableCell } from "../../../shadcn/ui/table";
+import fetchPricingModels from "../../../functions/pricings/fetchPricings";
+import deletePricingByID from "../../../functions/pricings/deletePricingByID";
+import deleteAllPricings from "../../../functions/pricings/deleteAllPricings";
 
 export default function PricingModel() {
   const navigate = useNavigate()
@@ -31,14 +33,6 @@ export default function PricingModel() {
   useEffect(() => {
     fetchPricingModels(setLoading, setPricingModels, setError)
   }, []);
-
-  const handleModify = (id) => {
-    console.log(`Modify pricing model with ID: ${id}`);
-  };
-
-  const handleDelete = (id) => {
-    console.log(`Delete pricing model with ID: ${id}`);
-  };
 
   const renderRow = (model) => (
     <>
@@ -64,21 +58,23 @@ export default function PricingModel() {
 
   const renderActions = (model) => (
     <>
-      <Button
-        onClick={() => handleModify(model.id)}
+    
+     <Link to={"/admin/pricings/update"} state={{ model: model }}>
+     <Button
         variant="secondary"
         size="small"
-        className="flex items-center space-x-1"
+        className="flex items-center gap-2 text-[#d9b220]  w-full "
       >
         <Pencil className="w-4 h-4" />
         <span>Modify</span>
       </Button>
+     </Link>
 
-      <Button
-        onClick={() => handleDelete(model.id)}
+     <Button
+        onClick={() => deletePricingByID(model._id, setLoading, setError)}
         variant="danger"
         size="small"
-        className="flex items-center space-x-1"
+        className="flex items-center gap-2 text-red-500 "
       >
         <Trash className="w-4 h-4" />
         <span>Delete</span>
@@ -88,31 +84,43 @@ export default function PricingModel() {
 
   return (
     <ContentLayout title="Pricing Models">
-      <Breadcrumb className="text-white sticky">
+      <Breadcrumb className="text-[#2a2928] fixed">
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/">Home</Link>
+              <Link href="/admin">Home</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Pricing Models</BreadcrumbPage>
+            <BreadcrumbLink asChild>
+              <Link to="/admin/pricings">Pricings</Link>
+            </BreadcrumbLink>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <Link to={"/admin/pricings/new"}>
-        <Button className="mb-4 bg-blue-800 rounded text-white" variant="outline">
-          Create New Pricing Model
-        </Button>
-      </Link>
+      <div className="mt-16 ">
+     
+     <div className="flex  flex-wrap justify-end gap-4 pb-4">
+       <Link to={"/admin/pricings/new"}>
+       <Button className="bg-[#f47e42] rounded-[10px] text-white">
+         Create New Pricing Model
+       </Button>
+     </Link>
+     
+       <Button className="text-red-500 rounded-[10px] border border-red-500 bg-white" onClick={()=> deleteAllPricings(setLoading,setError)}>
+         Delete All Pricing Models
+       </Button>
+   </div>
 
-      <TableLayout
+
+   <TableLayout
         content_ar={pricingModels}
         headers={["Icon", "Special Offer","Plan", "Provided Assistants", "Allowed Users", "Price Per Hour", "Offers"]}
         renderRow={renderRow}
         actions={renderActions}
       />
+     </div>
     </ContentLayout>
   );
 }

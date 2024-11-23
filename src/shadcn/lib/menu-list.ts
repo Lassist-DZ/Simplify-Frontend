@@ -5,6 +5,7 @@ import {
   LayoutGrid,
   LucideIcon,
   MailQuestionIcon,
+  ShieldQuestion,
   Star
 } from "lucide-react";
 
@@ -30,17 +31,6 @@ type Group = {
 export function getMenuList(pathname: string): Group[] {
   return [
     {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/admin/dashboard",
-          label: "Dashboard",
-          icon: LayoutGrid,
-          submenus: []
-        }
-      ]
-    },
-    {
       groupLabel: "Contents",
       menus: [
       
@@ -63,6 +53,11 @@ export function getMenuList(pathname: string): Group[] {
           href: "/admin/testimonials",
           label: "Testimonials",
           icon: Star
+        },
+        {
+          href: "/admin/faqs",
+          label: "FAQs",
+          icon: ShieldQuestion
         },
         
 

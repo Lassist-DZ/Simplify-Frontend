@@ -2,7 +2,7 @@ import { Mail, MoveUpRight } from "lucide-react";
 import RightArrow from "../assets/icons/right-arrow";
 import "../assets/styles/components/cta_button.css";
 
-function CTA_Btn({ text, type, icon }) {
+function CTA_Btn({ text, type, icon, disabled }) {
   if (type === "cta_hero") {
     return (
       <button className={`cta_hero p-6  gap-2 hidden lg:inline-flex`}>
@@ -51,7 +51,7 @@ function CTA_Btn({ text, type, icon }) {
     );
   } else if (type === "cta_pricing") {
     return (
-      <button className="cta_pricing rounded-[10px] font-size-paragraph px-14 py-3 w-fit">
+      <button className="cta_pricing rounded-[10px] font-size-paragraph px-14 py-3 w-fit" disabled={disabled}>
         {text}
       </button>
     );

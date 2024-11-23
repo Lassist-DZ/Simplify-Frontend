@@ -1,0 +1,17 @@
+.pricing_description_card {
+    border: 1px solid var(--tertiary-base-100);
+    height: fit-content !important;
+}
+.pricing_offers {
+    color: var(--neutral-500, #4A4947);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.icon svg{
+    max-height: 24px;
+    height: 24px;
+    width: auto;
+}

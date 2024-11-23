@@ -1,12 +1,11 @@
 import axios from "axios"
 import { toast, Bounce } from "react-toastify";
-const modifyConsultation = async (setLoading, newPricingModel, setError) => {
+const deleteAllPricings = async (setLoading, setError) => {
     try {
       setLoading(true);
 
-      const response = await axios.post(
-        "https://simplify-backend-ap9i58wxa-simplify-f26de8d1.vercel.app/api/consultations/modifyConsultation",
-        newPricingModel
+      const response = await axios.delete(
+        "https://simplify-backend-ap9i58wxa-simplify-f26de8d1.vercel.app/api/pricings/delete_all"
       );
       toast.success(response.data.message, {
         position: "bottom-right",
@@ -20,9 +19,7 @@ const modifyConsultation = async (setLoading, newPricingModel, setError) => {
         transition: Bounce,
         });
       setLoading(false);
-      if (window.location.pathname === "/admin/consultations/new") {
-        window.location.href = "/admin/consultations";
-      }
+      window.location.reload()
     } catch (err) {
       console.log(err);
       toast.error(err.response.data.message, {
@@ -41,4 +38,4 @@ const modifyConsultation = async (setLoading, newPricingModel, setError) => {
     }
   };
 
-export default modifyConsultation
+export default deleteAllPricings

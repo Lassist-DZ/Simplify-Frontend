@@ -8,7 +8,7 @@ import {
   } from "../../shadcn/ui/accordion"
 import { Check, ChevronDownCircle } from "lucide-react"
 import { useState } from "react"
-import fetchFAQs from "../../functions/fetchFAQ"
+import fetchFAQs from "../../functions/faqs/fetchFAQ"
 const FAQ = () => {
   const [FAQs, setFAQs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,7 +16,7 @@ const FAQ = () => {
   useEffect(() => {
     fetchFAQs(setLoading, setFAQs, setError)
   }, []);
-    return <section  className="faq_section   flex gap-16 flex-col lg:py-20 lg:px-16 px-6 py-12 lg:px-[176px] lg:pb-[150px] pb-20 items-center bg-[#F7F7FB]">
+    return <section  className="faq_section  flex gap-16 flex-col lg:py-20 lg:px-16 px-6 py-12 lg:px-[176px] lg:pb-[150px] pb-20 items-center bg-[#F7F7FB]">
         <header className="faq_header lg:w-[80%]  flex-col items-center flex justify-center ">
         <small className="font-size-paragraph">FAQ</small>
         <h1 className="text-center">

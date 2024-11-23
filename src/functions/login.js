@@ -44,7 +44,7 @@ const handleLogin = async (e, setLoading, setError, email, password, navigate) =
         localStorage.setItem("token", response.data.token);
 
         // Navigate to the home page after successful login
-        navigate("/admin/dashboard"); // Replace "/home" with the actual route you want to navigate to
+        navigate("/admin/"); // Replace "/home" with the actual route you want to navigate to
       } else {
         toast.error("Login failed. Please check your credentials.", {
           position: "bottom-right",

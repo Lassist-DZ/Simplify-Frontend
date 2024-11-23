@@ -9,9 +9,6 @@ import {
   TooltipTrigger,
   TooltipProvider,
 } from "../../shadcn/ui/tooltip";
-import loggout from "../../functions/loggout";
-import SimplifyLogo from "../../assets/icons/simplify_logo";
-
 const Sidebar = () => {
   const pathname = useLocation().pathname;
   const menuList = getMenuList(pathname);

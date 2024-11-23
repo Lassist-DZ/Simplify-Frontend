@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ContentLayout } from "../../components/adminDashboard/content-layout";
+import { ContentLayout } from "../../../components/adminDashboard/content-layout";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,10 +8,10 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "../../shadcn/ui/breadcrumb";
-import FormControl from "../../components/FormControl";
-import { Button } from "../../shadcn/ui/button";
-import createSubscriber from "../../functions/createSubscriber";
+} from "../../../shadcn/ui/breadcrumb";
+import FormControl from "../../../components/FormControl";
+import { Button } from "../../../shadcn/ui/button";
+import createSubscriber from "../../../functions/newsletter/createSubscriber";
 
 export default function NewSubscriber() {
   const [newSubscriber, setNewSubscriber] = useState({
@@ -34,7 +34,7 @@ export default function NewSubscriber() {
 
   return (
     <ContentLayout title="New Subscriber">
-      <Breadcrumb className="text-white fixed">
+      <Breadcrumb className="text-[#2a2928] fixed">
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
@@ -62,7 +62,7 @@ export default function NewSubscriber() {
           title="Subscriber Details"
         />
         <div className="mt-6 flex justify-center">
-          <Button onClick={() => createSubscriber(setLoading,newSubscriber, setError)} className="bg-blue-700 rounded text-white" isLoading={loading}>
+          <Button onClick={() => createSubscriber(setLoading,newSubscriber, setError)} className="bg-[#f47e42] rounded-[10px] text-white" isLoading={loading}>
             {loading ? "Creating..." : "Add Subscriber"}
           </Button>
         </div>

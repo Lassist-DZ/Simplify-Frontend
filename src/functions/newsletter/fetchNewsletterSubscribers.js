@@ -1,5 +1,5 @@
 import axios from "axios";
-import loggout from "./loggout";
+import loggout from "../loggout";
 const fetchNewsletterSubs = async (setLoading, token, setConsultations, navigate, setError) => {
     try {
       setLoading(true);

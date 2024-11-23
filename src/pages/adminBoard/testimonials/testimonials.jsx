@@ -1,8 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "../../shadcn/ui/button";
-import { ContentLayout } from "../../components/adminDashboard/content-layout";
+import { Button } from "../../../shadcn/ui/button";
+import { ContentLayout } from "../../../components/adminDashboard/content-layout";
 import { useState, useEffect } from "react";
-import fetchTestimonials from "../../functions/fetchTestimonials";
+import fetchTestimonials from "../../../functions/testimonials/fetchTestimonials";
+import deleteTestimonialByID from "../../../functions/testimonials/deleteTestimonialByID";
+import deleteAllTestimonials from "../../../functions/testimonials/deleteAllTestimonials";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -10,10 +12,10 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "../../shadcn/ui/breadcrumb";
+} from "../../../shadcn/ui/breadcrumb";
 import { Pencil, Trash } from "lucide-react";
-import TableLayout from "../../components/adminDashboard/table-layout";
-import { TableCell } from "../../shadcn/ui/table";
+import TableLayout from "../../../components/adminDashboard/table-layout";
+import { TableCell } from "../../../shadcn/ui/table";
 
 export default function Testimonials() {
   const navigate = useNavigate()
@@ -32,39 +34,32 @@ export default function Testimonials() {
     fetchTestimonials(setLoading, setTestimonials, setError)
   }, []);
 
-  const handleModify = (id) => {
-    console.log(`Modify pricing model with ID: ${id}`);
-  };
-
-  const handleDelete = (id) => {
-    console.log(`Delete pricing model with ID: ${id}`);
-  };
 
   const renderRow = (testimonial) => (
     <>
-      <TableCell className="px-4 py-2 border border-gray-200">{testimonial.witness_image}</TableCell>
+      <TableCell className="px-4 py-2 border border-gray-200"><img src={testimonial.witness_image} className="w-[6rem] h-[6rem] rounded-[50%]" alt="" /></TableCell>
       <TableCell className="px-4 py-2 border border-gray-200">{testimonial.username}</TableCell>
       <TableCell className="px-4 py-2 border border-gray-200">{testimonial.testimony_text}</TableCell>
     </>
   );
 
-  const renderActions = (model) => (
+  const renderActions = (testimonial) => (
     <>
-      <Button
-        onClick={() => handleModify(model.id)}
+     <Link to={"/admin/testimonials/update"} state={{ testimonial: testimonial }}>
+     <Button
         variant="secondary"
         size="small"
-        className="flex items-center space-x-1"
+        className="flex items-center gap-2 text-[#d9b220]  w-full "
       >
         <Pencil className="w-4 h-4" />
         <span>Modify</span>
       </Button>
-
-      <Button
-        onClick={() => handleDelete(model.id)}
+     </Link>
+     <Button
+        onClick={() => deleteTestimonialByID(testimonial._id, setLoading, setError)}
         variant="danger"
         size="small"
-        className="flex items-center space-x-1"
+        className="flex items-center gap-2 text-red-500 "
       >
         <Trash className="w-4 h-4" />
         <span>Delete</span>
@@ -73,32 +68,44 @@ export default function Testimonials() {
   );
 
   return (
-    <ContentLayout title="Pricing Models">
-      <Breadcrumb className="text-white sticky">
+    <ContentLayout title="Testimonials">
+      <Breadcrumb className="text-[#2a2928] fixed">
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/">Home</Link>
+              <Link href="/admin">Home</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Testimonials</BreadcrumbPage>
+          <BreadcrumbLink asChild>
+              <Link to="/admin/testimonials">Testimonials</Link>
+            </BreadcrumbLink>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
+
+      <div className="mt-16">
+      <div className="flex  flex-wrap justify-end gap-4 pb-4">
       <Link to={"/admin/testimonials/new"}>
-        <Button className="mb-4 bg-blue-800 rounded text-white" variant="outline">
+        <Button className="bg-[#f47e42] rounded-[10px] text-white">
           Create New Testimonial
         </Button>
       </Link>
-
+      <Button className="text-red-500 rounded-[10px] border border-red-500 bg-white" onClick={()=> deleteAllTestimonials(setLoading,setError)}>
+         Delete All Testimonials
+       </Button>
+      </div>
       <TableLayout
         content_ar={testimonials}
         headers={["Image", "Username", "Testimony"]}
         renderRow={renderRow}
         actions={renderActions}
       />
+      </div>
+    
+
+     
     </ContentLayout>
   );
 }

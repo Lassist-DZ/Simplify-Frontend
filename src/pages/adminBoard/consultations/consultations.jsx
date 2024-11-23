@@ -24,14 +24,6 @@ export default function Consultations() {
     fetchConsultations(setLoading, token, setConsultations, navigate, setError)
   }, []);
 
-  const handleModify = (id) => {
-    console.log(`Modify consultation with ID: ${id}`);
-  };
-
-  const handleDelete = (id) => {
-    console.log(`Delete consultation with ID: ${id}`);
-  };
-
   const renderRow = (consultation) => (
     <>
       <TableCell className="px-4 py-2 border border-gray-200">{consultation.full_name}</TableCell>
@@ -44,15 +36,16 @@ export default function Consultations() {
 
   const renderActions = (consultation) => (
     <>
-      <Button
-        onClick={() => handleModify(consultation._id)}
+     <Link to={"/admin/consultations/update"} state={{ consultation: consultation }}>
+     <Button
         variant="secondary"
         size="small"
-        className="flex items-center gap-2 text-[#d9b220]"
+        className="flex items-center gap-2 text-[#d9b220]  w-full "
       >
         <Pencil className="w-4 h-4" />
         <span>Modify</span>
       </Button>
+     </Link>
 
       <Button
         onClick={() => deleteConsultationByID(consultation._id, setLoading, setError)}
