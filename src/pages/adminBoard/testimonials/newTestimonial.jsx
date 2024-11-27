@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Testimonial_image from "../../../assets/images/testimonial_person.jpg"
 import { ContentLayout } from "../../../components/adminDashboard/content-layout";
 import {
   Breadcrumb,
@@ -68,6 +69,18 @@ export default function NewTestimonial() {
       </Breadcrumb>
 
       <div className="mt-16 flex flex-col gap-8 items-center">
+        <div className="flex  items-start gap-4 ">
+        <h5 className=" text-center w-fit text-gray-400 border-b border-b-gray-400">Preview:</h5>
+        <div className="h-[100%] testimonial_slide flex flex-col lg:gap-4 gap-12 lg:items-start items-center">
+      <img src={!newTestimonial.witness_image ? Testimonial_image: newTestimonial.witness_image} alt="user testimonial profile" className='w-[6rem] h-[6rem] ' />
+    <div className="flex flex-col gap-6">
+  <blockquote className="font-size-paragraph-large">
+      <em>" </em>{!newTestimonial.testimony_text ? "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit adipisci a repellat, officiis, excepturi incidunt cupiditate aspernatur ad quos dolore enim deleniti neque omnis dignissimos ea cum eligendi reprehenderit quasi?": newTestimonial.testimony_text}<em>"</em>
+  </blockquote>
+  <cite className='text-l'>@{!newTestimonial.username ? "John Doe": newTestimonial.username}</cite>
+</div>
+  </div>
+        </div>
         <FormControl
           formData={newTestimonial}
           onInputChange={handleInputChange}

@@ -9,62 +9,39 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "../../../shadcn/ui/breadcrumb";
+import { AccordionItem, AccordionContent, AccordionTrigger, Accordion } from "../../../shadcn/ui/accordion";
 import { Button } from "../../../shadcn/ui/button";
-import createNewModel from "../../../functions/pricings/createPricingModel";
+import createFAQ from "../../../functions/faqs/createFAQ";
 import FormControl from "../../../components/FormControl";
-import PricingCard from "../../../components/home/pricing_card";
 export default function NewFAQ() {
-  const [newPricingModel, setNewPricingModel] = useState({
-    special_offer: "",
-    icon: null, // Set initial value to null for the file
-    category: "",
-    assistants_count: "",
-    users_count: "",
-    price_per_hour: "",
-    services: "",
+  const [newFAQ, setNewFAQ] = useState({
+   question: "",
+   answer: ""
   });
 
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const handleInputChange = async (field, value) => {
-    console.log(field, value)
-    if (field === "icon" && value instanceof File) {
-      const file = value;
-      const svgContent = await file.text(); // Read SVG content as text
-      setNewPricingModel((prevModel) => ({
-        ...prevModel,
-        [field]: svgContent // Store SVG content directly
-      }));
-    } else {
-      setNewPricingModel((prevModel) => ({
+    
+      setNewFAQ((prevModel) => ({
         ...prevModel,
         [field]: value
       }));
-    }
+    
   };
 
   const handleSubmit = () => {
-    const formData = new FormData();
-    Object.entries(newPricingModel).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
-
-    createNewModel(setLoading, newPricingModel, setError);
+    createFAQ(setLoading, newFAQ, setError);
   };
   
-  const pricingFields = [
-    { type: "file", attribute: "icon", placeholder: "Upload your preferred icon" },
-    { type: "text", attribute: "special_offer", placeholder: "If it's a special offer, enter the label of it" },
-    { type: "text", attribute: "category", placeholder: "Enter plan category" },
-    { type: "text", attribute: "assistants_count", placeholder: "How many assistants are provided for this plan?" },
-    { type: "text", attribute: "users_count", placeholder: "How many users are allowed in this plan?" },
-    { type: "number", attribute: "price_per_hour", placeholder: "Enter price per hour" },
-    { type: "textarea", attribute: "services", placeholder: "Enter services included (comma-separated)" }
+  const faqFields = [
+    { type: "text", attribute: "question", placeholder: "Write the question here" },
+    { type: "text", attribute: "answer", placeholder: "Write the answer here" },
   ];
 
   return (
-    <ContentLayout title="New Pricing Model">
+    <ContentLayout title="New FAQ">
       <Breadcrumb className="text-[#2a2928] fixed">
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -75,7 +52,7 @@ export default function NewFAQ() {
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link to="/admin/pricings">Pricing Models</Link>
+              <Link to="/admin/faqs">FAQa</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
@@ -88,18 +65,28 @@ export default function NewFAQ() {
       <div className="mt-16  flex flex-col gap-8 items-center ">
           <div className="relative">
           <h5 className="absolute top-0 -left-20 text-gray-400 border-b border-b-gray-400">Preview:</h5>
-          <PricingCard model={newPricingModel} preview />
+          <Accordion  collapsible className="flex flex-col lg:py-16 py-8lg:px-16 lg:px-12 px-6 lg:gap-7  gap-4 rounded-[18px] bg-[#E5F0FD]">
+          <AccordionItem   value={`item-example`} className="bg-white lg:py-1 py-0 lg:px-6 px-4  rounded-[20px] w-[50vw]">
+<AccordionTrigger className="hover:[&>svg]:rotate-90 [&[data-state=open]>svg]:rotate-90 transition-transform duration-200 font-size-paragraph text-black justify-between   w-full">
+{!newFAQ.question ? "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident aliquam qui laudantium natus placeat quasi, harum consequuntur vel ?" : newFAQ.question}
+        </AccordionTrigger>
+        <AccordionContent className="lg:py-5 font-size-paragraph text-gray-700">
+        {!newFAQ.answer ? "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident aliquam qui laudantium natus placeat quasi, harum consequuntur vel" : newFAQ.answer}
+
+        </AccordionContent>
+      </AccordionItem>
+          </Accordion>
           </div>
           
         <FormControl
-          formData={newPricingModel}
+          formData={newFAQ}
           onInputChange={handleInputChange}
-          fields={pricingFields}
-          title="Pricing Model Details"
+          fields={faqFields}
+          title="FAQ Details"
         />
         <div className="mt-6 flex justify-center">
           <Button onClick={handleSubmit} className="bg-[#f47e42] rounded-[10px] text-white" isLoading={loading}>
-            {loading ? "Creating..." : "Create Pricing Model"}
+            {loading ? "Creating..." : "Create FAQ"}
           </Button>
         </div>
       </div>

@@ -1,12 +1,13 @@
 import axios from "axios";
 import { toast, Bounce } from "react-toastify";
+import config from "../../config";
 
 const updatePricing = async (id, updatedData, setLoading, setError) => {
   try {
     setLoading(true);
 console.log(updatedData)
     const response = await axios.put(
-      `https://simplify-backend-ol4xbirab-simplify-f26de8d1.vercel.app/api/pricing/update_pricing_by_id/${id}`,
+      config.API_URL +`pricing/update_pricing_by_id/${id}`,
       updatedData
     );
 

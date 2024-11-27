@@ -1,10 +1,11 @@
 import axios from "axios"
 import { toast, Bounce } from "react-toastify";
+import config from "../../config";
 const createNewModel = async (setLoading, newPricingModel, setError) => {
     try {
       setLoading(true);
 
-      const response = await axios.post("https://simplify-backend-p6g56yj6r-simplify-f26de8d1.vercel.app/api/pricing/create_pricing", newPricingModel, {
+      const response = await axios.post(config.API_URL + "pricing/create_pricing", newPricingModel, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

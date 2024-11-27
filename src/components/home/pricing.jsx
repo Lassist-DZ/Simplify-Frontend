@@ -14,7 +14,7 @@ const Pricing = () => {
 
   return (
     <section className="pricing_section flex gap-16 flex-col lg:py-28 px-6 py-14 lg:px-16 items-center">
-      <header className="pricing_header lg:w-[50%] flex-col gap-4 items-center flex justify-center ">
+      <header className="pricing_header lg:w-[50%] flex-col gap-4 items-center flex justify-center text-center ">
         <h1 className="text-white">
           Discover our{" "}
           <span className="relative z-[1]">
@@ -28,9 +28,9 @@ const Pricing = () => {
           We are dedicated to providing outstanding digital and design services that meet both functional and aesthetic needs.
         </p>
       </header>
-      <div className="pricing_description grid lg:grid-cols-3 grid-cols-1 gap-8">
+      <div className="pricing_description grid lg:grid-cols-3 grid-cols-1 gap-8 h-fit">
         {pricingModels.map((model) => (
-          <PricingCard key={model.id} model={model} /> // Use the PricingCard component
+          <PricingCard key={model.id} model={model} />
         ))}
       </div>
     </section>

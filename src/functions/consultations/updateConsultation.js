@@ -1,12 +1,13 @@
 import axios from "axios";
 import { toast, Bounce } from "react-toastify";
+import config from "../../config";
 
 const updateConsultation = async (id, updatedData, setLoading, setError) => {
   try {
     setLoading(true);
 
     const response = await axios.put(
-      `https://simplify-backend-50i4p642b-simplify-f26de8d1.vercel.app/api/consultations/update_consultation_by_id/${id}`,
+      config.API_URL + `consultations/update_consultation_by_id/${id}`,
       
       updatedData
     );

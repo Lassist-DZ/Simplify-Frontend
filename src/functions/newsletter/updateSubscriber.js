@@ -1,12 +1,13 @@
 import axios from "axios";
 import { toast, Bounce } from "react-toastify";
+import config from "../../config";
 
 const updateSubscriber = async (id, updatedData, setLoading, setError) => {
   try {
     setLoading(true);
 console.log(updatedData)
     const response = await axios.put(
-      `https://simplify-backend-6rokdnv31-simplify-f26de8d1.vercel.app/api/newsletter_subs/update_subscriber_by_id/${id}`,
+      config.API_URL + `newsletter_subs/update_subscriber_by_id/${id}`,
       updatedData
     );
 

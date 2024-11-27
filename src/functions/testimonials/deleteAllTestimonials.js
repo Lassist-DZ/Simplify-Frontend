@@ -1,11 +1,12 @@
 import axios from "axios"
 import { toast, Bounce } from "react-toastify";
+import config from "../../config";
 const deleteAllTestimonials = async (setLoading, setError) => {
     try {
       setLoading(true);
 
       const response = await axios.delete(
-        "http://localhost:3000/api/testimonials/delete_all"
+        config.API_URL + "testimonials/delete_all"
       );
       toast.success(response.data.message, {
         position: "bottom-right",

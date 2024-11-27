@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Bounce, toast } from "react-toastify";
+import config from "../config"
 const validateForm = (email, password) => {
     if (!email) {
       return "Email is required.";
@@ -34,7 +35,7 @@ const handleLogin = async (e, setLoading, setError, email, password, navigate) =
 
     try {
       const response = await axios.post(
-        "https://simplify-backend-p6g56yj6r-simplify-f26de8d1.vercel.app/api/auth/login", {
+        config.API_URL + "auth/login", {
         email,
         password,
       });

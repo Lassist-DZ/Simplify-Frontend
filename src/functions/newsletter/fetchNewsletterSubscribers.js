@@ -1,10 +1,12 @@
 import axios from "axios";
 import loggout from "../loggout";
+import config from "../../config";
 const fetchNewsletterSubs = async (setLoading, token, setConsultations, navigate, setError) => {
     try {
       setLoading(true);
       const response = await axios.get(
-        "https://simplify-backend-p6g56yj6r-simplify-f26de8d1.vercel.app/api/newsletter_subs/get_newsletter_subs_all",
+        config.API_URL + "newsletter_subs/get_subscribers_all",
+
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -12,7 +14,7 @@ const fetchNewsletterSubs = async (setLoading, token, setConsultations, navigate
         }
       );
       if (response.status === 200) {
-        setConsultations(response.data);
+        setConsultations(response.data.data);
       }
       setLoading(false);
     } catch (err) {

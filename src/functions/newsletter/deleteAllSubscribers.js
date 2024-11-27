@@ -1,11 +1,12 @@
 import axios from "axios"
 import { toast, Bounce } from "react-toastify";
+import config from "../../config";
 const deleteAllSubscribers = async (token, setLoading, setError) => {
     try {
       setLoading(true);
 
       const response = await axios.delete(
-        "https://simplify-backend-xr7o6faws-simplify-f26de8d1.vercel.app/api/newsletter_subs/delete_all",
+        config.API_URL+ "newsletter_subs/delete_all",
         {
           headers: {
             Authorization: `Bearer ${token}`,

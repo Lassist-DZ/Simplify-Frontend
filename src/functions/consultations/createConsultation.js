@@ -1,11 +1,12 @@
 import axios from "axios"
+import config from "../../config"
 import { toast, Bounce } from "react-toastify";
 const createConsultation = async (setLoading, newPricingModel, setError) => {
     try {
       setLoading(true);
 
       const response = await axios.post(
-        "https://simplify-backend-ap9i58wxa-simplify-f26de8d1.vercel.app/api/consultations/create_consultation",
+        config.API_URL + "consultations/create_consultation",
         newPricingModel
       );
       toast.success(response.data.message, {

@@ -1,12 +1,13 @@
 import axios from "axios"
+import config from "../../config"
 import { toast, Bounce } from "react-toastify";
-import config from "../../config";
-const deleteAllConsultations = async (setLoading, setError) => {
+const createFAQ = async (setLoading, newPricingModel, setError) => {
     try {
       setLoading(true);
 
-      const response = await axios.delete(
-        config.API_URL +"consultations/delete_all"
+      const response = await axios.post(
+        config.API_URL + "faqs/create_faq",
+        newPricingModel
       );
       toast.success(response.data.message, {
         position: "bottom-right",
@@ -20,7 +21,9 @@ const deleteAllConsultations = async (setLoading, setError) => {
         transition: Bounce,
         });
       setLoading(false);
-      window.location.reload()
+      if (window.location.pathname === "/admin/faqs/new") {
+        window.location.href = "/admin/faqs";
+      }
     } catch (err) {
       console.log(err);
       toast.error(err.response.data.message, {
@@ -39,4 +42,4 @@ const deleteAllConsultations = async (setLoading, setError) => {
     }
   };
 
-export default deleteAllConsultations
+export default createFAQ

@@ -1,11 +1,12 @@
 import axios from "axios"
 import { toast, Bounce } from "react-toastify";
+import config from "../../config";
 const createSubscriber = async (setLoading, newPricingModel, setError) => {
     try {
       setLoading(true);
 
       const response = await axios.post(
-        "https://simplify-backend-p6g56yj6r-simplify-f26de8d1.vercel.app/api/newsletter_subs/create_subscriber",
+        config.API_URL + "newsletter_subs/create_subscriber",
         newPricingModel
       );
       toast.success(response.data.message, {

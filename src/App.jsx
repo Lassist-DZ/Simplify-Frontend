@@ -20,6 +20,7 @@ import UpdateTestimonial from './pages/adminBoard/testimonials/updateTestimonial
 import FAQs from './pages/adminBoard/faqs/faqs';
 import NewFAQ from './pages/adminBoard/faqs/newFAQ';
 import UpdateFAQ from './pages/adminBoard/faqs/updateFAQ';
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';

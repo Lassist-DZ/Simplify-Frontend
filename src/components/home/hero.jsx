@@ -16,14 +16,13 @@ const Hero = () => {
         <div className="px-8 lg:px-16 pt-14  lg:pt-20 flex flex-col gap-8 items-center lg:items-start text-center lg:text-left">
           <div className="flex flex-col gap-6">
             <p className="font-size-display text-neutral-600">
-              <span className="bg-svg-custom inline-block">Virtual</span>{" "}
-              Assistance
+            Welcome to
+              <span className="bg-svg-custom inline-block">Simplify</span>{" "}
+
             </p>
 
             <p className="font-size-paragraph-large">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
-              optio eaque tempora fuga quidem velit perferendis animi dolorem
-              hic, vel pariatur.
+            Professional Virtual Assistance Tailored for Your Needs
             </p>
           </div>
 

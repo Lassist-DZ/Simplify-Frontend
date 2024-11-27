@@ -2,14 +2,14 @@ import axios from "axios";
 import { toast, Bounce } from "react-toastify";
 import config from "../../config";
 
-const deleteSubscriberByID = async (id, setLoading, setError) => {
-    console.log(id)
+const updateFAQ = async (id, updatedData, setLoading, setError) => {
   try {
-    setError(null);
     setLoading(true);
 
-    const response = await axios.delete(
-      config.API_URL +`newsletter_subs/delete_subscriber_by_id/${id}` 
+    const response = await axios.put(
+      config.API_URL + `faqs/update_faq_by_id/${id}`,
+      
+      updatedData
     );
 
     toast.success(response.data.message, {
@@ -25,12 +25,16 @@ const deleteSubscriberByID = async (id, setLoading, setError) => {
     });
 
     setLoading(false);
-    window.location.reload();
+
+    // Redirect to the consultations page if on the edit page
+    if (window.location.pathname.includes("/admin/faqs/update")) {
+      window.location.href = "/admin/faqs";
+    }
   } catch (err) {
     console.error(err);
-    const errorMessage = err.response?.data?.message || "An error occurred while deleting the subscriber.";
-    
-    toast.error(errorMessage, {
+
+    // Handle error with toast and state
+    toast.error(err.response?.data?.message || "Failed to update consultation.", {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -42,9 +46,9 @@ const deleteSubscriberByID = async (id, setLoading, setError) => {
       transition: Bounce,
     });
 
-    setError(errorMessage);
+    setError(err.response?.data?.message || "An error occurred.");
     setLoading(false);
   }
 };
 
-export default deleteSubscriberByID;
+export default updateFAQ;

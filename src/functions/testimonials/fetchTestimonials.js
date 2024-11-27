@@ -1,9 +1,10 @@
 import axios from "axios";
+import config from "../../config";
 const fetchTestimonials = async (setLoading, setPricingModels, setError) => {
     try {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:3000/api/testimonials/get_testimonials_all"
+        config.API_URL + "testimonials/get_testimonials_all"
       );
 
       if (response.status === 200) {

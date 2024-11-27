@@ -1,5 +1,6 @@
 import axios from "axios";
 import { toast, Bounce } from "react-toastify";
+import config from "../../config";
 
 const deleteTestimonialByID = async (id, setLoading, setError) => {
     console.log(id)
@@ -8,7 +9,7 @@ const deleteTestimonialByID = async (id, setLoading, setError) => {
     setLoading(true);
 
     const response = await axios.delete(
-      `http://localhost:3000/api/testimonials/delete_testimonial_by_id/${id}` 
+      config.API_URL + `testimonials/delete_testimonial_by_id/${id}` 
     );
 
     toast.success(response.data.message, {

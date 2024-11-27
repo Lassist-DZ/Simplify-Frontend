@@ -22,25 +22,22 @@ const WhyChooseUs = () => {
         <div className="flex flex-col justify-center items-center gap-6">
           <EarthIcon />
           <h4 className="text-[#F47E42] ">Multilingual Expertise</h4>
-          <p className="font-size-paragraph1">
-            Lorem ipsum dolor sit amet consectetur. Diam arcu tortor et cursus
-            id quis orci sed eget. Elit ut lectus in est ligula egestas.
+          <p className="font-size-paragraph1 text-center">
+          Our team is fluent in multiple languages, ensuring that language barriers are never an issue. We provide seamless communication and support tailored to your linguistic preferences.
           </p>
         </div>
         <div className="flex flex-col justify-center items-center gap-6">
           <HandShakeIcon />
-          <h4 className="text-[#F47E42] ">Qualified Professionals</h4>
-          <p className="font-size-paragraph1">
-            Lorem ipsum dolor sit amet consectetur. Diam arcu tortor et cursus
-            id quis orci sed eget. Elit ut lectus in est ligula egestas.
+          <h4 className="text-[#F47E42] ">Skilled Professionals</h4>
+          <p className="font-size-paragraph1 text-center">
+          Every virtual assistant at Simplify is selected for their expertise and dedication. We match you with a professional whose skills align with your specific needs, ensuring optimal results.
           </p>
         </div>
         <div className="flex flex-col justify-center items-center gap-6">
           <InvestmentIcon />
-          <h4 className="text-[#F47E42] ">Profitable Solutions</h4>
-          <p className="font-size-paragraph1">
-            Lorem ipsum dolor sit amet consectetur. Diam arcu tortor et cursus
-            id quis orci sed eget. Elit ut lectus in est ligula egestas.
+          <h4 className="text-[#F47E42] ">Cost-Effective Solutions</h4>
+          <p className="font-size-paragraph1 text-center">
+          Experience top-quality service at competitive prices. Our pricing models are designed to offer significant value without stretching your budget.
           </p>
         </div>
       </div>

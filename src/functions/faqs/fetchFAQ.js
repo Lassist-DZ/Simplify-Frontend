@@ -1,13 +1,14 @@
 import axios from "axios";
+import config from "../../config";
 const fetchFAQs = async (setLoading, setFAQs, setError) => {
     try {
       setLoading(true);
       const response = await axios.get(
-        "https://simplify-backend-enudp3p7e-simplify-f26de8d1.vercel.app/api/faqs/get_faqs_all"
+        config.API_URL +"faqs/get_faqs_all"
       );
 
       if (response.status === 200) {
-          setFAQs(response.data);
+          setFAQs(response.data.data);
         console.log(response)
       }
       setLoading(false);

@@ -5,10 +5,10 @@ import CTA_Btn from "../cta_button";
 import "../../assets/styles/components/home/pricing_card.css"
 const PricingCard = ({ model, preview }) => {
   return (
-    <Card className="pricing_description_card w-[300px] relative bg-white h-auto rounded-[20px] px-7 py-8">
+    <Card className={`pricing_description_card w-[300px] relative min-h-full bg-white rounded-b-[20px] ${!model.special_offer ? "rounded-t-[20px]": "rounded-t-[20px] lg:rounded-t-[0px]"} h-auto   px-7 py-6`}>
       {/* Special Offer Banner */}
       {model.special_offer && (
-        <h4 className="absolute flex justify-center items-center top-0 left-1/2 transform -translate-x-1/2 h-[36px] w-[300px] bg-[#F47E42] text-white text-[1.25rem] font-medium text-base leading-[1.35] py-1 text-center rounded-t-[20px] border-t border-[#feda79]">
+        <h4 className="absolute flex justify-center  items-center lg:-top-[36px] -top-0 left-1/2 transform -translate-x-1/2 h-[36px] w-[300px] bg-[#F47E42] text-white text-[1.25rem] font-medium text-base leading-[1.35] py-1 text-center rounded-t-[20px] border-t border-[#feda79]">
           {model.special_offer}
         </h4>
       )}

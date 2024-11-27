@@ -1,5 +1,6 @@
 import axios from "axios";
 import { toast, Bounce } from "react-toastify";
+import config from "../../config";
 
 const createNewTestimonial = async (setLoading, formData, setError) => {
   try {
@@ -8,7 +9,7 @@ const createNewTestimonial = async (setLoading, formData, setError) => {
       console.log(`${key}:`, value);
     }
     const response = await axios.post(
-      "http://localhost:3000/api/testimonials/create_testimonial",
+      config.API_URL + "testimonials/create_testimonial",
       formData,
       {
         headers: {

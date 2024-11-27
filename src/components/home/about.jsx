@@ -4,18 +4,18 @@ import AboutMobile from "../../assets/images/about_image_mobile.png";
 import "../../assets/styles/components/home/about.css";
 import { Link } from "react-router-dom";
 const About = () => {
-    return <section className="about px-8 lg:px-16 lg:pt-[150px] pb-20   lg:h-screen">
-     <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:h-max">
+    return <section className="about px-8 lg:px-16   flex items-center lg:h-screen">
+     <div className="grid grid-cols-1 lg:grid-cols-2   gap-4 lg:h-max">
      <header className="about_header">
-  <img src={AboutMobile} alt="About us image"  className="lg:w-[550px] h-auto"/>
+  <img src={AboutMobile} alt="About us image"  className="w-[34rem] h-auto "/>
   
 </header>
-  <div className="about_description flex flex-col justify-between h-full  py-8">
-    <div className="about_description_content flex flex-col lg:gap-2 gap-4 ">
+  <div className="about_description flex flex-col justify-between h-full lg:text-left text-center py-8">
+    <div className="about_description_content  flex flex-col lg:gap-2 gap-4 ">
       <h1>
-        Why you choose{" "}
         <span className="font-size-display">
-          Simplify
+        
+Simplify: 
           <svg viewBox="0 0 212 54" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect
               x="-0.504883"
@@ -28,11 +28,11 @@ const About = () => {
             />
           </svg>
         </span>
+        Professional, Multilingual, and Cost-Effective Virtual Assistants
       </h1>
 
           <p className="font-size-paragraph-large">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Simplify your life and business operations with our expert virtual assistants. Whether you need help with administrative tasks, customer support, or digital marketing, we’ve got you covered. Our multilingual team ensures you receive the best support in your preferred language.
           </p>
         </div>
 

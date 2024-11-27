@@ -1,5 +1,6 @@
 import axios from "axios";
 import { toast, Bounce } from "react-toastify";
+import config from "../../config";
 
 const deletePricingByID = async (id, setLoading, setError) => {
     console.log(id)
@@ -8,7 +9,7 @@ const deletePricingByID = async (id, setLoading, setError) => {
     setLoading(true);
 
     const response = await axios.delete(
-      `https://simplify-backend-50i4p642b-simplify-f26de8d1.vercel.app/api/pricing/delete_pricing_by_id/${id}` 
+      config.API_URL + `pricing/delete_pricing_by_id/${id}` 
     );
 
     toast.success(response.data.message, {
