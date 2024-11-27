@@ -4,15 +4,13 @@ import AboutMobile from "../../assets/images/about_image_mobile.png";
 import "../../assets/styles/components/home/about.css";
 import { Link } from "react-router-dom";
 const About = () => {
-    return <section className="about px-8 lg:px-16 lg:pt-[150px] pb-20 grid grid-cols-1 lg:grid-cols-2 gap-4 items-end lg:h-screen">
-        <header className="about_header relative px-4 flex justify-center">
-  <img src={AboutImage} alt="About us image" className="hidden lg:block" />
-  <img src={AboutMobile} alt="About us image" className="lg:hidden" />
-  <h2 className="about_header_title absolute lg:top-6 lg:right-[-110px]  left-1/2 hidden lg:block lg:left-auto font-medium">
-    About Title
-  </h2>
+    return <section className="about px-8 lg:px-16 lg:pt-[150px] pb-20   lg:h-screen">
+     <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:h-max">
+     <header className="about_header">
+  <img src={AboutMobile} alt="About us image"  className="lg:w-[550px] h-auto"/>
+  
 </header>
-  <div className="about_description flex flex-col justify-between gap-10">
+  <div className="about_description flex flex-col justify-between h-full  py-8">
     <div className="about_description_content flex flex-col lg:gap-2 gap-4 ">
       <h1>
         Why you choose{" "}
@@ -44,6 +42,7 @@ const About = () => {
         </div>
         </Link>
       </div>
+     </div>
     </section>
 };
 export default About;

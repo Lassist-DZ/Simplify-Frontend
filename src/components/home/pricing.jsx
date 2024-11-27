@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { Card, CardDescription, CardHeader, CardTitle } from "../../shadcn/ui/card";
-import { Check } from "lucide-react";
 import fetchPricingModels from "../../functions/pricings/fetchPricings";
 import PricingCard from "./pricing_card";
 import "../../assets/styles/components/home/pricing.css"

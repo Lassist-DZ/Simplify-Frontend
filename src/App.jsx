@@ -28,8 +28,9 @@ import Login from './pages/adminBoard/login';
 import Contacts from './pages/contacts';
 import About from './pages/about';
 import Jobs from './pages/jobs';
+
 const isLoggedIn = () => {
-  return !!localStorage.getItem("token"); 
+  return !!localStorage.getItem("token");
 };
 
 const AdminRoute = ({ children }) => {
@@ -40,19 +41,18 @@ function App() {
   return (
     <div>
       <Router>
-        <Routes>  
+        <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path='/' element={<Home/>}/>
-          <Route path='/home' element={<Home/>}/>
-          <Route path='/contact_us' element={<Contacts/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/jobs' element={<Jobs/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/contact_us" element={<Contacts />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/jobs" element={<Jobs />} />
           <Route
             path="/admin/*"
             element={
               <AdminRoute>
                 <div className="flex min-h-screen">
-                 
                   <Routes>
                     <Route path="/" element={<Consultations />} />
                     <Route path="/consultations" element={<Consultations />} />
@@ -100,6 +100,7 @@ function App() {
 
           <Route path="*" element={<Page404 />} />
         </Routes>
+      
       </Router>
 
       <ToastContainer />

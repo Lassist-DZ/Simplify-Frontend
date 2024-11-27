@@ -9,6 +9,7 @@ import JoinUs from "../components/home/JoinUS";
 import Pricing from "../components/home/pricing";
 import FAQ from "../components/home/FAQ";
 import JobsList from "../components/jobs/jobs_list";
+import Footer from "../components/footer";
 
 const Jobs = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +20,7 @@ const Jobs = () => {
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Hero/>
       <JobsList/>
+      <Footer/>
     </main>
   );
 };
